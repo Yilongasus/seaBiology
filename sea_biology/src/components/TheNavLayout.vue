@@ -1,6 +1,6 @@
 <template>
 
-<nav class="navbar navbar-expand-lg text-center bg-light zindex_2">
+<nav class="navbar navbar-expand-lg bg-light zindex_2">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
         <img src="../assets/navLogo.png" class="img-fluid" style="width:64px;" alt="navLogo.png">
@@ -11,17 +11,17 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">展 館</a>
+          <a class="nav-link active" aria-current="page" href="#">展館</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">活 動</a>
+          <a class="nav-link" href="#">活動</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">服 務</a>
+          <a class="nav-link" href="#">服務</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            各類 公告
+            各類公告
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">展館</a></li>
