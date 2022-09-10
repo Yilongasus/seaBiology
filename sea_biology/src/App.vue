@@ -1,18 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
   <TheParticlesVue></TheParticlesVue>
+  <TheNavLayoutVue></TheNavLayoutVue>  
+  <img alt="Vue logo" src="./assets/logo.png" class="zindex_2">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>  
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import TheParticlesVue from './components/TheParticles.vue';
+import TheParticlesVue from './components/TheParticles.vue'
+
+import TheNavLayoutVue from './components/TheNavLayout.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    TheParticlesVue
+    TheParticlesVue,
+    TheNavLayoutVue    
   }
 }
 </script>
@@ -24,6 +29,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 35px;
 }
 </style>
