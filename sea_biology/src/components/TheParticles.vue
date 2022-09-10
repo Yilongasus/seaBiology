@@ -12,9 +12,9 @@ export default {
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#ffffff"
+      "value": "#2E72E9"
     },
-    "image": "url('https://particles.js.org/images/background3.jpg')",
+    "image": "url('https://i.imgur.com/Zf6TG8a.png')",
     "position": "50% 50%",
     "repeat": "no-repeat",
     "size": "cover",
