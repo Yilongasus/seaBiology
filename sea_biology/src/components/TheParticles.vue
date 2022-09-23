@@ -1,5 +1,5 @@
 <template>
-    <Particles id="tsparticles" :particlesInit="particlesInit" :options="options" />
+    <Particles id="tsparticles" class="zindex_1" :particlesInit="particlesInit" :options="options" />
 </template>
 
 <script>
