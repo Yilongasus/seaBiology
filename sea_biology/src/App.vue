@@ -1,11 +1,13 @@
 <template>
   <TheParticlesVue></TheParticlesVue>
   <TheNavLayoutVue></TheNavLayoutVue>  
+  <TheSideBarVue></TheSideBarVue>
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="zindex_2"> -->
   <div id="main" class="mt-4 p-5 bg-white position-sticky vh-100 zindex_2">
-    <h1>Jumbotron Example</h1>
+    <h1>展館消息</h1>
+    <div>展館公告{{ seaData }}</div>
     <div v-for="data in seaData" v-bind:key="data" class="border-orange-800">
-     {{ data.Source }}
+      <div>{{ data.Source }}</div>
     </div>
   </div>
 
@@ -19,6 +21,9 @@ import TheNavLayoutVue from './components/TheNavLayout.vue'
 
 import axios from 'axios'
 
+// sideBar
+// import TheSideBarVue from './components/TheSideBar.vue'
+
 // import {ref} from 'vue'
 
 export default {
@@ -26,7 +31,8 @@ export default {
   components: {
     // HelloWorld,
     TheParticlesVue,
-    TheNavLayoutVue    
+    TheNavLayoutVue,
+    // TheSideBarVue    
   },
   setup() {
 
@@ -72,6 +78,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 35px;
 }
 </style>

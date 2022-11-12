@@ -15,23 +15,23 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">展館</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link active text-white" aria-current="page" href="#">展館</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">活動</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link text-white" href="#">活動</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">服務</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link text-white" href="#">服務</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item mx-3 dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               各類公告
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">展館</a></li>
-              <li><a class="dropdown-item" href="#">活動</a></li>
-              <li><a class="dropdown-item" href="#">服務</a></li>
+              <li><a class="dropdown-item text-white" href="#">展館</a></li>
+              <li><a class="dropdown-item text-white" href="#">活動</a></li>
+              <li><a class="dropdown-item text-white" href="#">服務</a></li>
             </ul>
           </li>
         </ul>
@@ -61,12 +61,13 @@ export default {
 
 <style scoped>
 .navbar {
-    background-color: #A3C1F5 !important;
+    background: linear-gradient(to right, #2E55E0, #3971E0, #57B3E4) !important;
     /* background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2E72E9" fill-opacity="1" d="M0,32L120,64C240,96,480,160,720,160C960,160,1200,96,1320,64L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>') !important;     */
     background-size:cover;
-    box-shadow: 0px 2px 3px #2E72E9,
-    0px 2px 3px #5090EC,
-    0px 2px 3px #74B0F0,
-    0px 2px 3px #C6CDE9;
+    padding: 15px 0;
+    box-shadow: 
+    0px 2px 10px #74B0F0,
+    0px 2px 30px #ffffff,
+    0px 2px 30px #ffffff;
 }
 </style>
