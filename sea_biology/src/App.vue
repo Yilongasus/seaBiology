@@ -21,6 +21,9 @@ import TheNavLayoutVue from './components/TheNavLayout.vue'
 
 import axios from 'axios'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // sideBar
 // import TheSideBarVue from './components/TheSideBar.vue'
 
@@ -65,6 +68,8 @@ export default {
 
   }
 }
+
+AOS.init();
 </script>
 
 <style>

@@ -16,22 +16,22 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item mx-3">
-            <a class="nav-link active text-white" aria-current="page" href="#">展館</a>
+            <a class="nav-link active text-white" aria-current="page" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="1100" href="#">展 館</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-white" href="#">活動</a>
+            <a class="nav-link text-white" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">活 動</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-white" href="#">服務</a>
+            <a class="nav-link text-white" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">服 務</a>
           </li>
-          <li class="nav-item mx-3 dropdown">
+          <li class="nav-item mx-3 dropdown" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="1100">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              各類公告
+              各 類 公 告
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="#">展館</a></li>
-              <li><a class="dropdown-item text-white" href="#">活動</a></li>
-              <li><a class="dropdown-item text-white" href="#">服務</a></li>
+              <li><a class="dropdown-item" href="#">展館</a></li>
+              <li><a class="dropdown-item" href="#">活動</a></li>
+              <li><a class="dropdown-item" href="#">服務</a></li>
             </ul>
           </li>
         </ul>
@@ -42,6 +42,7 @@
     
 <script scoped>
 /*eslint-disable*/
+
 
 export default {
     
