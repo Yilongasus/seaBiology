@@ -1,3 +1,10 @@
+<!-- ***************
+
+    背景幾何特效
+    2022/11/12 已完成
+
+     *************** -->
+
 <template>
     <Particles id="tsparticles" class="zindex_1" :particlesInit="particlesInit" :options="options" />
 </template>

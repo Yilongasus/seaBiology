@@ -34,6 +34,13 @@
               <li><a class="dropdown-item" href="#">服務</a></li>
             </ul>
           </li>
+
+          <li class="nav-item mx-3 dropdown" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="1100">
+            <a class="nav-link text-white" href="#">
+              線 上 預 約
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>

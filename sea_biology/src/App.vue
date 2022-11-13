@@ -1,3 +1,11 @@
+<!-- ***************
+
+    屏東海生館形象官網
+    展館( 首頁 )
+    2022/11/13 開發中
+
+     *************** -->
+
 <template>
   <TheParticlesVue></TheParticlesVue>
   <TheNavLayoutVue></TheNavLayoutVue>  
@@ -32,7 +40,6 @@ import 'aos/dist/aos.css';
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
     TheParticlesVue,
     TheNavLayoutVue,
     // TheSideBarVue    
