@@ -1,24 +1,7 @@
-# sea_biology
+# 國立海洋生物博物館形象官網
 
-## Project setup
-```
-npm install
-```
+#### 前端框架：![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### 資料來源：[政府資料開放平台](https://data.gov.tw/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### 專案開發時程：2022/11/13

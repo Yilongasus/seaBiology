@@ -1,7 +1,7 @@
 <!-- ***************
 
     屏東海生館形象官網
-    展館( 首頁 )
+    首頁
     2022/11/13 開發中
 
      *************** -->
@@ -10,24 +10,13 @@
   <TheParticlesVue></TheParticlesVue>
   <TheNavLayoutVue></TheNavLayoutVue>  
   <TheSideBarVue></TheSideBarVue>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" class="zindex_2"> -->
-  <div id="main" class="mt-4 p-5 bg-white position-sticky vh-100 zindex_2">
-    <h1>展館消息</h1>
-    <div>展館公告{{ seaData }}</div>
-    <div v-for="data in seaData" v-bind:key="data" class="border-orange-800">
-      <div>{{ data.Source }}</div>
-    </div>
-  </div>
-
+  <div id="main" class="mt-4 p-5 bg-white position-sticky vh-100 zindex_2"></div>  
 </template>
-
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import TheParticlesVue from './components/TheParticles.vue'
 
 import TheNavLayoutVue from './components/TheNavLayout.vue'
-
-import axios from 'axios'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -44,51 +33,23 @@ export default {
     TheNavLayoutVue,
     // TheSideBarVue    
   },
-  setup() {
+  setup() { }
 
-    let seaData;
-
-    let promiseData = new Promise( (resolve, reject) => {
-      axios.get('https://www.nmmba.gov.tw/OpenData.aspx?SN=C7A4275096465BFB')
-      .then((res, error) => {
-          resolve(res)   // 結果成功
-          reject(error)  // 結果失敗
-      })
-
-    });
-
-    promiseData
-    .then( res => {
-      seaData = res.data
-      console.table(seaData)
-      return seaData
-
-    })
-    .catch( error => {
-      // alert(`拒絕成功`)
-      console.log(`Error： ${error}`)
-    })
-
-    return {
-      seaData
-    }
-
-  }
 }
 
 AOS.init();
 </script>
 
 <style>
-#main {
-  border-radius: 80% 20% 81% 19% / 41% 82% 18% 59%;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #main {
+      border-radius: 80% 20% 81% 19% / 41% 82% 18% 59%;
+  }
 </style>

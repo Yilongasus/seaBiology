@@ -36,15 +36,21 @@
           </li>
 
           <li class="nav-item mx-3 dropdown" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="1100">
-            <a class="nav-link text-white" href="#">
+            <router-link class="nav-link text-white" to="/TheLogin">
               線 上 預 約
-            </a>
+            </router-link>
           </li>
 
         </ul>
       </div>
     </div>
+
+    <router-view></router-view>
+
   </nav>
+
+
+
 </template>
     
 <script scoped>
