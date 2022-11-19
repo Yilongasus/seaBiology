@@ -10,13 +10,14 @@
   <TheParticlesVue></TheParticlesVue>
   <TheNavLayoutVue></TheNavLayoutVue>  
   <!-- <TheSideBarVue></TheSideBarVue> -->
-  <div id="main" class="mt-4 p-5 bg-white position-sticky vh-100 zindex_2">
-    <div class="row">
-      <div class="card col-6 mt-5 justify-content-around" v-for="item in exhibitionItems" :key="item">
-        <div class="card-body">
-          <h5 class="card-title">{{ item.平面圖名稱 }}</h5>
-          <p class="card-text">{{ item.平面圖說明 }}</p>
-          <a href="{{ item.平面圖網址 }}" class="btn btn-primary" target="__blank">更多資訊</a>
+  <div id="main" class="mt-4 p-5 position-sticky vh-100 zindex_2">
+    <div class="row justify-content-center mt-8">
+      <div class="card col-6 w-25 mx-3 mt-5 py-3 animate__animated animate__fadeIn align-items-center border-0 justify-content-around shadow bg-body rounded" v-for="item in exhibitionItems" :key="item">
+        <div class="card-body justify-content-center">
+          <h3 class="card-title fw-bolder">{{ item.平面圖名稱 }}</h3>
+          <hr style="background-color: #70A7BA; height: 5px;">
+          <p class="card-text text-start py-3">{{ item.平面圖說明 }}</p>
+          <a href="{{ item.平面圖網址 }}" class="btn px-4 btn-yellow text-black" target="__blank">更多資訊</a>
         </div>
       </div>
     </div>
@@ -70,6 +71,27 @@ AOS.init();
   }
 
   #main {
-      border-radius: 80% 20% 81% 19% / 41% 82% 18% 59%;
+    background: linear-gradient(to right, #fff, #3971E0, #57B3E4) !important;
+    border-radius: 80% 20% 81% 19% / 41% 82% 18% 59%;
+  }
+
+  .card {
+
+  }
+
+  .btn-yellow {
+    background-color:#E3DF40 !important;  
+    box-shadow: 5px 5px 0px #3971E0;
+    transition: all 2s;  
+  }
+
+  .btn-yellow:hover {
+    background-color:#3971E0 !important;  
+    box-shadow: 5px 5px 0px #E3DF40;    
+    color: #ffffff !important; 
+  }  
+
+  .text-brown {
+    color: #9B703B;    
   }
 </style>
