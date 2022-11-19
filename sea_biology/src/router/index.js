@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router';
 
-// import App from 'App.vue'
+// import App from '@/assets'
 import TheLogin from '@/components/TheLogin'
 
 const history = createWebHistory();
