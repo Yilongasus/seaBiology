@@ -15,9 +15,9 @@
       <div class="card col-6 w-25 mx-3 mt-5 py-3 animate__animated animate__fadeIn align-items-center border-0 justify-content-around shadow bg-body rounded" v-for="item in exhibitionItems" :key="item">
         <div class="card-body justify-content-center">
           <h3 class="card-title fw-bolder">{{ item.平面圖名稱 }}</h3>
-          <hr style="background-color: #70A7BA; height: 5px;">
+          <hr style="background-color: #3971E0; height: 5px;">
           <p class="card-text text-start py-3">{{ item.平面圖說明 }}</p>
-          <a href="{{ item.平面圖網址 }}" class="btn px-4 btn-yellow text-black" target="__blank">更多資訊</a>
+          <a :href="item.平面圖網址" class="btn px-4 btn-yellow text-black" target="__blank">更多資訊</a>
         </div>
       </div>
     </div>
@@ -71,27 +71,19 @@ AOS.init();
   }
 
   #main {
-    background: linear-gradient(to right, #fff, #3971E0, #57B3E4) !important;
+    background: linear-gradient(to right, #fff, #083DA6, #3D30F2) !important;
     border-radius: 80% 20% 81% 19% / 41% 82% 18% 59%;
   }
 
-  .card {
-
-  }
-
   .btn-yellow {
-    background-color:#E3DF40 !important;  
-    box-shadow: 5px 5px 0px #3971E0;
+    background-color:#F2C224 !important;  
+    box-shadow: 5px 5px 0px #083DA6;
     transition: all 2s;  
   }
 
   .btn-yellow:hover {
-    background-color:#3971E0 !important;  
-    box-shadow: 5px 5px 0px #E3DF40;    
+    background-color:#083DA6 !important;  
+    box-shadow: 5px 5px 0px #F2C224;    
     color: #ffffff !important; 
   }  
-
-  .text-brown {
-    color: #9B703B;    
-  }
 </style>

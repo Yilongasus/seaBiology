@@ -19,7 +19,7 @@ export default {
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#2E72E9"
+      "value": "#F2C224"
     },
     "image": "url('https://i.imgur.com/Zf6TG8a.png')",
     "position": "50% 50%",

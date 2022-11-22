@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item mx-3">
-            <a class="nav-link active text-white" aria-current="page" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">展 館</a>
+            <router-link class="nav-link text-white" to="/" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">展 館</router-link>
           </li>
           <li class="nav-item mx-3">
             <a class="nav-link text-white" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">活 動</a>
