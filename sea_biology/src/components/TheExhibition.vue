@@ -2,55 +2,40 @@
 
     屏東海生館形象官網
     展館
-    2022/11/15 開發中
+    2023/04/06 開發中
 
      *************** -->
 
-<template>
-    <h1>展館消息</h1>
-    <div>展館公告{{ seaData }}</div>
-    <div v-for="data in seaData" v-bind:key="data" class="border-orange-800">
-      <div>{{ data.Source }}</div>
-    </div>
-</template>
-<script>
-import axios from 'axios'
-
-export default {
-  name: 'TheExhibition',
-  components: { 
-  },
-  setup() {
-
-    let seaData;
-
-    let promiseData = new Promise( (resolve, reject) => {
-      axios.get('https://www.nmmba.gov.tw/OpenData.aspx?SN=C7A4275096465BFB')
-      .then((res, error) => {
-          resolve(res)   // 結果成功
-          reject(error)  // 結果失敗
-      })
-
-    });
-
-    promiseData
-    .then( res => {
-      seaData = res.data
-      console.table(seaData)
-      return seaData
-
-    })
-    .catch( error => {
-      // alert(`拒絕成功`)
-      console.log(`Error： ${error}`)
-    })
-
-    return {
-      seaData
+     <template>
+      <div id="main" class="mt-4 p-5 position-sticky vh-100 zindex_2">
+        <div class="row justify-content-center mt-8">
+          <div class="card col-6 w-25 mx-3 mt-5 py-3 animate__animated animate__fadeIn align-items-center border-0 justify-content-around shadow bg-body rounded" v-for="item in exhibitionItems" :key="item">
+            <div class="card-body justify-content-center">
+              <h3 class="card-title fw-bolder">{{ item.平面圖名稱 }}</h3>
+              <hr style="background-color: #3971E0; height: 5px;">
+              <p class="card-text text-start py-3">{{ item.平面圖說明 }}</p>
+              <a :href="item.平面圖網址" class="btn px-4 btn-yellow text-black" target="__blank">更多資訊</a>
+            </div>
+          </div>
+        </div>
+      </div>  
+    
+    </template>
+    <script>
+    
+    import json from '../csv/Exhibition.json'
+    
+    export default {
+      name: 'App',
+      components: {}
+      ,data() {
+        return {
+          exhibitionItems: json
+        }
+      }
+      ,setup() { 
+    
+      }
+    
     }
-
-  }
-
-}
-
-</script>
+    </script>   

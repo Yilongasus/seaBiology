@@ -10,7 +10,7 @@
   <TheParticlesVue></TheParticlesVue>
   <TheNavLayoutVue></TheNavLayoutVue>  
   <!-- <TheSideBarVue></TheSideBarVue> -->
-  <div id="main" class="mt-4 p-5 position-sticky vh-100 zindex_2">
+  <!-- <div id="main" class="mt-4 p-5 position-sticky vh-100 zindex_2">
     <div class="row justify-content-center mt-8">
       <div class="card col-6 w-25 mx-3 mt-5 py-3 animate__animated animate__fadeIn align-items-center border-0 justify-content-around shadow bg-body rounded" v-for="item in exhibitionItems" :key="item">
         <div class="card-body justify-content-center">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>   -->
 
 </template>
 <script>

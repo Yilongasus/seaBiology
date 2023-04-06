@@ -15,14 +15,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item mx-3">
-            <router-link class="nav-link text-white" to="/" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">展 館</router-link>
+          <li class="nav-item mx-3" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
+            <router-link class="nav-link text-white" to="/">首 頁</router-link>
           </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link text-white" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">活 動</a>
+          <li class="nav-item mx-3" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
+            <router-link class="nav-link text-white" to="/TheNews">展 館 消 息</router-link>
           </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link text-white" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">服 務</a>
+          <li class="nav-item mx-3" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
+            <router-link class="nav-link text-white" to="/TheExhibition">展 館 介 紹</router-link>
+            <!-- <a class="nav-link text-white" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">服 務</a> -->
           </li>
           <li class="nav-item mx-3 dropdown" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
