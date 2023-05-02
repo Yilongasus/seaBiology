@@ -14,7 +14,8 @@
             <div v-for="(data, index) in seaData" :key="index" class="border-orange-800">
               <div>
                 <h5>{{ data['標題'] }}</h5>
-                {{ data['標題'] }}
+                <div v-html="data['內容']"></div>
+                <p>資料來源：{{ data['資料來源'] }}</p>
                 <a :href="data['Source']">按我前往➡</a>
               </div>
             </div>
@@ -52,7 +53,15 @@
             seaData
           }
       
-        }
+        },
+        // changeHtml(val) {
+        //   let dom = document.createElement('div')
+        //   dom.innerHTML = val
+        //   return {
+        //     dom
+        //   }
+        // }
+        // 原本要轉內容的html字串變成html
       
       }
       
