@@ -34,15 +34,24 @@ export default {
     TheParticlesVue,
     TheNavLayoutVue,
     // TheSideBarVue    
-  }
-  ,data() {
+  },
+  data() {
     return {
-      exhibitionItems: json
+      exhibitionItems: json,
+      pageTitle: ''
     }
-  }
-  ,setup() { 
-
-  }
+  },
+  setup() { 
+  },
+  mounted() {
+    this.setPageTitle();
+  },  
+  methods: {
+    setPageTitle() {
+      this.pageTitle = import.meta.env.VITE_APP_TITLE || '敬請期待';
+      document.title = this.pageTitle;
+    }
+  },
 
 }
 

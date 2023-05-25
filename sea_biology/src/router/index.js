@@ -1,9 +1,9 @@
 import { createWebHistory, createRouter } from 'vue-router';
 
 // import App from '@/App'
-import TheLogin from '@/components/TheLogin'
-import TheExhibition from '@/components/TheExhibition'
-import TheNews from '@/components/TheNews'
+import TheLogin from '@/components/TheLogin.vue'
+import TheExhibition from '@/components/TheExhibition.vue'
+import TheNews from '@/components/TheNews.vue'
 
 const history = createWebHistory();
 const router = createRouter({
