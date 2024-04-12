@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from 'vue-router';
 
 // import App from '@/App'
+import TheIndex from '@/components/TheIndex.vue'
 import TheLogin from '@/components/TheLogin.vue'
 import TheExhibition from '@/components/TheExhibition.vue'
 import TheNews from '@/components/TheNews.vue'
@@ -10,8 +11,8 @@ const router = createRouter({
     history, routes:[
         {
             path: '/',
-            // component: App,
-            name: 'App',  
+            component: TheIndex,
+            name: 'TheIndex',  
             meta: {title: '首頁'}                                  
         },        
         {

@@ -52,7 +52,6 @@
 </template>
     
 <script scoped>
-/*eslint-disable*/
 
 
 export default {

@@ -8,9 +8,8 @@
 
 <template>
   <TheParticlesVue></TheParticlesVue>
-  <TheNavLayoutVue></TheNavLayoutVue>  
+  <TheNavLayoutVue></TheNavLayoutVue>
   <!-- <TheSideBarVue></TheSideBarVue> -->
-
 </template>
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
@@ -82,5 +81,5 @@ AOS.init();
     background-color:#083DA6 !important;  
     box-shadow: 5px 5px 0px #F2C224;    
     color: #ffffff !important; 
-  }  
+  } 
 </style>
