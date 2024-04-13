@@ -10,7 +10,7 @@
         <h1 class="text-light pt-5 shack display-2 z-3" :key="text">{{ text }}</h1>
     </div>
     <div class="d-flex justify-content-center position-sticky zindex_2 mt-3">
-        <div class="imgIndexShow imgLeftRect animate__animated animate__fadeInLeft">
+        <div class="imgIndexShow imgLeftRect animate__animated animate__fadeInLeft animate__delay-4s">
             <img
             class="img-thumbnail w-50" 
             src="https://ws.nmmba.gov.tw/001/Upload/OldFile/FileDownLoad/PublishActivies/20150715104349228.JPG"
@@ -24,7 +24,7 @@
             alt="蟹逅經典特展海報"
             >
         </div> -->
-        <div class="imgIndexShow imgRightRect animate__animated animate__fadeInRightBig">
+        <div class="imgIndexShow imgRightRect animate__animated animate__fadeInRightBig animate__delay-5s">
             <img
             class="img-thumbnail w-50"
             src="https://ws.nmmba.gov.tw/001/Upload/217/relpic/6415/12438/fb37bbcf-a02f-4508-a881-a0d8802238b7.jpg"
