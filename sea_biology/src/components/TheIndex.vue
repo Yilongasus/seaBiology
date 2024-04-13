@@ -7,7 +7,7 @@
      *************** -->
 <template>
     <div id="main" class="mt-4 p-5 position-sticky zindex_2 text-white">
-        <h1 class="text-warning pt-5 shack display-2 z-3" :key="text">{{ text }}</h1>
+        <h1 class="text-light pt-5 shack display-2 z-3" :key="text">{{ text }}</h1>
     </div>
 </template>
 <style>
@@ -31,6 +31,6 @@
     import { ref, reactive, watch } from 'vue'
     let text = ref('哈囉')
     setTimeout(()=> {
-        text.value = '歡迎來到水世界'
+        text.value = '歡迎來到屏東海生館'
     }, 3000)
 </script>

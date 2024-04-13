@@ -72,14 +72,14 @@ AOS.init();
   }
 
   .btn-yellow {
-    background-color:#F2C224 !important;  
+    background-color:#fbc860 !important;  
     box-shadow: 5px 5px 0px #083DA6;
     transition: all 2s;  
   }
 
   .btn-yellow:hover {
     background-color:#083DA6 !important;  
-    box-shadow: 5px 5px 0px #F2C224;    
+    box-shadow: 5px 5px 0px #fbc860;    
     color: #ffffff !important; 
   } 
 </style>

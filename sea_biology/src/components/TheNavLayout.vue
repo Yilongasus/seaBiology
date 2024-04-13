@@ -86,13 +86,12 @@ nav {
 }
 
 .navbar {
-    background: linear-gradient(to right, #2E55E0, #3971E0, #57B3E4) !important;
+    background: linear-gradient(to right, #083DA6, #083DA6, #8093F1) !important;
     /* background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2E72E9" fill-opacity="1" d="M0,32L120,64C240,96,480,160,720,160C960,160,1200,96,1320,64L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>') !important;     */
     background-size:cover;
     padding: 15px 0;
     box-shadow: 
-    0px 2px 10px #74B0F0,
-    0px 2px 30px #ffffff,
-    0px 2px 30px #ffffff;
+    0px 1px 10px #74B0F0,
+    0px 2px 10px #8093F1;
 }
 </style>
