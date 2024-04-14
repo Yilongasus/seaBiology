@@ -16,17 +16,17 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item mx-3" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
-            <router-link class="nav-link text-white" to="/">首 頁</router-link>
+            <router-link class="nav-link" to="/">首 頁</router-link>
           </li>
           <li class="nav-item mx-3" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
-            <router-link class="nav-link text-white" to="/TheNews">展 館 消 息</router-link>
+            <router-link class="nav-link" to="/TheNews">展 館 消 息</router-link>
           </li>
           <li class="nav-item mx-3" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
-            <router-link class="nav-link text-white" to="/TheExhibition">展 館 介 紹</router-link>
-            <!-- <a class="nav-link text-white" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">服 務</a> -->
+            <router-link class="nav-link" to="/TheExhibition">展 館 介 紹</router-link>
+            <!-- <a class="nav-link" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500" href="#">服 務</a> -->
           </li>
           <li class="nav-item mx-3 dropdown" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               各 類 公 告
             </a>
             <ul class="dropdown-menu">
@@ -37,7 +37,7 @@
           </li>
 
           <li class="nav-item mx-3 dropdown" data-aos="flip-up" data-aos-easing="linear" data-aos-duration="500">
-            <router-link class="nav-link text-white" to="/TheLogin">
+            <router-link class="nav-link" to="/TheLogin">
               線 上 預 約
             </router-link>
           </li>
@@ -86,12 +86,21 @@ nav {
 }
 
 .navbar {
-    background: linear-gradient(to right, #083DA6, #083DA6, #8093F1) !important;
+    background: linear-gradient(to right, #154166, #154166, #154166) !important;
     /* background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2E72E9" fill-opacity="1" d="M0,32L120,64C240,96,480,160,720,160C960,160,1200,96,1320,64L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>') !important;     */
     background-size:cover;
     padding: 15px 0;
     box-shadow: 
-    0px 1px 10px #74B0F0,
-    0px 2px 10px #8093F1;
+    0px 1px 30px #ffffff,
+    0px 0px 10px #B5A9B2;
+}
+
+.navbar a {
+    color: #ffffff;
+}
+
+
+.navbar a:hover {
+    color: #D09366;
 }
 </style>

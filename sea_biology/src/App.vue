@@ -59,15 +59,15 @@ AOS.init();
 
 <style>
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: "Microsoft Jhenghei", "Avant Garde", sans; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #444444;
   }
 
   #main {
-    background: linear-gradient(to right, #fff, #083DA6, #3D30F2) !important;
+    background: linear-gradient(to right, #6B5264, #154166, #6B5264) !important;
     border-radius: 80% 20% 81% 19% / 41% 82% 18% 59%;
   }
 

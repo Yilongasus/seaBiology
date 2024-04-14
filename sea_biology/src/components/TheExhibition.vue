@@ -14,16 +14,29 @@
                 <h3 class="card-title fw-bolder">{{ item.平面圖名稱 }}</h3>
                 <hr style="background-color: #3971E0; height: 5px;">
                 <p class="card-text text-start py-3">{{ item.平面圖說明 }}</p>
-                <a :href="item.平面圖網址" class="btn px-4 btn-yellow text-black" target="__blank">更多資訊</a>
+                <a :href="item.平面圖網址" class="btn px-4" target="__blank">更多資訊</a>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<style>
+<style scoped>
     .card {
-        background: #F2F4FF;
+        background: #FFFFFF;
+    }
+
+    .btn {
+        background-color: #D09366;
+        box-shadow: 3px 3px #154166;
+        color: #ffffff;
+        transition: all 0.5s;
+    }
+
+    .btn:hover {
+        color: #D09366;
+        background-color: #154166;
+        box-shadow: 3px 3px #6B5264;
     }
 
     #articleWidth {
