@@ -19,7 +19,7 @@
                 >
             </div>
             <div class="col-sm-6 col-12 text-start ms-sm-2 ms-0 animate__animated animate__fadeInRightBig animate__delay-4s">
-                <div class="px-3 fs-5">
+                <div class="px-3 pt-sm-0 pt-4 fs-5">
                     <p class="lh-lg">您是否曾經好奇過，透明魚究竟是如何辦到的？牠們為什麼能夠在深海中生存？牠們在海洋生態中扮演著什麼角色？</p>
                     <p class="lh-lg"><span class="fw-bolder">《雀斯派倫特 • 費雪的秘密》</span>特展將帶領您深入探索透明魚的世界，揭開牠們的神秘面紗。特展透過互動式展示、多媒體影片和標本實體等方式，讓您深入了解透明魚的生物學特徵、研究方法和生態價值。</p>
                 </div>
@@ -27,7 +27,7 @@
         </div>
 
 
-        <div class="d-flex align-items-center row mx-2 py-3 bg-white animate__animated animate__fadeInUp animate__delay-4s">
+        <div class="d-flex align-items-center row mx-4 py-3 bg-white animate__animated animate__fadeInUp animate__delay-4s">
             <div class="col-sm-6 col-12 text-start animate__animated animate__fadeInLeft animate__delay-5s">
                 <div class="px-5 fs-5">
                     <p class="fw-bold">展現創意，探索科學</p>
