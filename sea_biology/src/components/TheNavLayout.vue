@@ -5,14 +5,14 @@
 
   <nav class="navbar navbar-expand-lg bg-light zindex_2">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <router-link class="nav-link" to="/">
         <img
           src="../assets/seaLogo.png"
           class="img-fluid"
-          style="width: 64px"
+          style="width: 164px"
           alt="navLogo.png"
         />
-      </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -26,14 +26,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li
+          <!-- <li
             class="nav-item mx-3"
             data-aos="flip-up"
             data-aos-easing="linear"
             data-aos-duration="500"
           >
             <router-link class="nav-link" to="/">首 頁</router-link>
-          </li>
+          </li> -->
           <li
             class="nav-item mx-3"
             data-aos="flip-up"
@@ -97,16 +97,17 @@ nav {
 }
 
 .navbar {
-  /* background: linear-gradient(to right, #b5a9b2, #FFFFFF) !important; */
-  background: linear-gradient(to right, #154166, #154166, #154166) !important;
+  background: linear-gradient(to right, #FFFFFF, #FFFFFF) !important;
+  /* background: linear-gradient(to right, #154166, #154166, #154166) !important; */
   /* background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2E72E9" fill-opacity="1" d="M0,32L120,64C240,96,480,160,720,160C960,160,1200,96,1320,64L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>') !important;     */
   background-size: cover;
-  padding: 15px 0;
+  padding: 0.25rem 0;
   box-shadow: 0px 1px 30px #ffffff, 0px 0px 10px #b5a9b2;
 }
 
 .navbar a {
   color: #ffffff;
+  color: #525252;
 }
 
 .navbar a:hover {

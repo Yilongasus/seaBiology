@@ -19,7 +19,7 @@ export default {
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#8AA0B3"
+      "value": "#DAE1E7"
     },
     "image": "url('https://hackmd.io/_uploads/HJX0C1KxC.png')",
     // "image": "url('https://i.imgur.com/Zf6TG8a.png')",
