@@ -19,7 +19,7 @@
     </div>
     <div class="position-sticky zindex_2 mt-5">
         <h2 class="mt-4 mb-0 mx-4 py-2 rounded-top-circle activeBgTitle animate__animated animate__fadeInUp animate__delay-2s">活動介紹</h2>
-        <div class="d-flex align-items-center row mx-4 pb-3 bg-white animate__animated animate__fadeInUp animate__delay-3s">
+        <div class="d-flex align-items-center row mx-4 pb-3 bg-white bg-opacity-75 animate__animated animate__fadeInUp animate__delay-3s">
             <div class="imgIndexShow imgLeftRect mt-3 col-sm-5 col-12 animate__animated animate__fadeInLeft animate__delay-4s">
                 <img
                 class="img-thumbnail w-50" 
@@ -36,14 +36,14 @@
         </div>
 
 
-        <div class="d-flex align-items-center row mx-4 py-3 bg-white animate__animated animate__fadeInUp animate__delay-4s">
+        <div class="d-flex align-items-center row mx-4 py-3 bg-white bg-opacity-75 animate__animated animate__fadeInUp animate__delay-4s">
             <div class="col-sm-6 col-12 text-start sm:order-2 order-1 animate__animated animate__fadeInLeft animate__delay-5s">
                 <div class="px-5 fs-6">
                     <p class="fw-bold">展現創意，探索科學</p>
                     <p class="lh-lg">本競賽以科學探究精神為出發點，生活中有許多大家習以為常的事件或現象，希望參賽者能多提出質疑與假設，收集和分析數據、驗證假設、重複驗證與討論，從這些過程中學習獲得結論，實際運用到生活當中。</p>
                 </div>
             </div>
-            <div class="imgIndexShow imgRightRect col-sm-5 col-12  sm:order-1 order-2 animate__animated animate__fadeInRightBig animate__delay-5s">
+            <div class="imgIndexShow imgRightRect col-sm-5 col-12 sm:order-1 order-2 animate__animated animate__fadeInRightBig animate__delay-5s">
                 <img
                 class="img-thumbnail w-50" 
                 src="https://ws.nmmba.gov.tw/001/Upload/217/relpic/6415/12438/fb37bbcf-a02f-4508-a881-a0d8802238b7.jpg"
@@ -73,8 +73,12 @@
         animation: change 1s ease-in-out;
     }
     .imgLeftRect {
-        background: linear-gradient(to right, #D09366, #B5A9B2);
+        background: linear-gradient(to right, #525252, #525252);
         border-radius: 16% 84% 77% 23% / 41% 67% 33% 59%;
+    }
+    .imgLeftRect::after {
+        background: linear-gradient(to right, #154166, #154166);
+        border-radius: 84% 16% 45% 55% / 57% 43% 57% 43% ;
     }
     .imgLeftRect img {
         box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -89,7 +93,7 @@
         transform:rotate(5deg);
     }
     .activeBgTitle {
-        background-color: #525252;
+        background: linear-gradient(to right, #B5A9B2, #525252);
         color: #ffffff;
     }
     @keyframes change {

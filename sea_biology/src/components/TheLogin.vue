@@ -1,9 +1,38 @@
 <template>
     <div
-        id="main"
-        class="mt-4 p-5 bg-white position-sticky vh-100 zindex_2 text-white"
+        class="position-sticky vh-100 zindex_2"
     >
-        <div>註冊登入</div>
+    <div class="d-flex loginAll">
+        <div class="flex-fill py-5">
+            <img class="loginImg" :src="loginImg" alt="登入圖">
+        </div>
+        <div class="p-2 flex-fill border bg-white justify-content-center">
+            <div class="loginTitle">註冊登入</div>
+            <div class="justify-content-center text-center">
+                <div id="g_id_onload"
+                data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-login_uri="https://yilongasus.github.io"
+                data-auto_prompt="false"
+                data-callback="handleCredentialResponse"
+                >
+            </div>
+            <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="continue_with"
+                data-size="large"
+                data-logo_alignment="left"
+                data-width="300">
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+        <!-- 
         <input type="text" v-model="changItem" @change="changeValue"/>
         <p class="text-white">
         {{ item }}
@@ -15,11 +44,13 @@
             <p>value {{ value }}</p>
         </div>
         <input type="text" v-model="watchVal.level.a"/>
-        <input type="text" v-model="watchVal.level.b"/>
+        <input type="text" v-model="watchVal.level.b"/> -->
     </div>
 </template>
 <script setup>
     import { ref, reactive, watch } from 'vue'
+    import loginImg from '/src/assets/login.png'
+
     let item = reactive({
             name:2,
             info: {
@@ -60,6 +91,19 @@
     .shack {
         font-size: large;
         animation: change 1s ease-in-out;
+    }
+    .loginAll {
+        background: linear-gradient(to right, #6B5264 20%, #154166 45%);
+    }
+    .loginImg {
+        /* background:url("/src/assets/login.png")center center no-repeat;  */
+        height: 500px;
+        width: 688px;
+    }
+    .loginTitle {
+        color: #4B4845;
+        font-size: 24px;
+        text-align: center;
     }
     @keyframes change {
         0% {
