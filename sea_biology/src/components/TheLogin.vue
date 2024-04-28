@@ -2,31 +2,62 @@
     <div
         class="position-sticky vh-100 zindex_2"
     >
-    <div class="d-flex loginAll">
-        <div class="flex-fill py-5">
+    <div class="d-flex vh-100 loginAll">
+        <div class="sm:flex-column flex-fill py-5 mt-5 align-items-center">
             <img class="loginImg" :src="loginImg" alt="登入圖">
         </div>
-        <div class="p-2 flex-fill border bg-white justify-content-center">
-            <div class="loginTitle">註冊登入</div>
-            <div class="justify-content-center text-center">
-                <div id="g_id_onload"
-                data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
-                data-context="signin"
-                data-ux_mode="popup"
-                data-login_uri="https://yilongasus.github.io"
-                data-auto_prompt="false"
-                data-callback="handleCredentialResponse"
-                >
-            </div>
-            <div class="g_id_signin"
-                data-type="standard"
-                data-shape="rectangular"
-                data-theme="outline"
-                data-text="continue_with"
-                data-size="large"
-                data-logo_alignment="left"
-                data-width="300">
-            </div>
+        <div class="p-2 sm:flex-column flex-fill border bg-white">
+
+            <div 
+            class="
+                d-flex
+                align-self-center
+                flex-column
+                pt-5
+                sm:mx-2
+                mx-5
+                mt-5
+                text-center
+            ">
+                <div class="loginTitle pt-5 mb-2 fw-bold">預約註冊</div>
+                <div>
+                    <p>歡迎使用官網線上預約，請先
+                        <span class="text-primary">G</span>
+                        <span class="text-danger">o</span>
+                        <span class="text-warning">o</span>
+                        <span class="text-primary">g</span>
+                        <span class="text-success">l</span>
+                        <span class="text-danger">e</span>
+                        註冊再進行預約！</p>
+                </div>
+                <div class="my-3">
+                    <div id="g_id_onload"
+                    data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-login_uri="https://yilongasus.github.io"
+                    data-auto_prompt="false"
+                    data-callback="handleCredentialResponse"
+                    >
+                </div>
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-shape="rectangular"
+                    data-theme="outline"
+                    data-text="continue_with"
+                    data-size="large"
+                    data-logo_alignment="left"
+                    data-width="">
+                </div>
+                </div>
+                <div class="tipGray">
+                    <p class="m-0">
+                        已有帳號了？<span class="text-primary fw-bold pe-auto">在此登入</span>
+                    </p>
+                </div>
+                <div class="privacyContent">
+                    <span>隱私權政策</span> | <span>服務條款聲明</span>
+                </div>
             </div>
 
         </div>
@@ -98,12 +129,17 @@
     .loginImg {
         /* background:url("/src/assets/login.png")center center no-repeat;  */
         height: 500px;
-        width: 688px;
     }
     .loginTitle {
         color: #4B4845;
         font-size: 24px;
         text-align: center;
+    }
+    .privacyContent {
+        color:#898580;
+        font-size: 14px;
+        text-align: left;
+        padding-top: 0.5rem;
     }
     @keyframes change {
         0% {

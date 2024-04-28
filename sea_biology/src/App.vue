@@ -81,5 +81,10 @@ AOS.init();
     background-color:#083DA6 !important;  
     box-shadow: 5px 5px 0px #fbc860;    
     color: #ffffff !important; 
-  } 
+  }
+  .tipGray {
+    font-size: 14px;
+    background: #E7EBEF;
+    padding: 0.75rem;
+  }
 </style>
