@@ -32,7 +32,7 @@ export default {
   components: {
     TheParticlesVue,
     TheNavLayoutVue,
-    // TheSideBarVue    
+    // TheSideBarVue
   },
   data() {
     return {

@@ -13,4 +13,7 @@ import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap"
 
+// pinia
+import pinia from 'stores'
+
 createApp(App).use(Particles).use(router).mount('#app')
