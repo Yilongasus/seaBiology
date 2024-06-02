@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia';
 import App from './App.vue'
 
 import router from './router'
@@ -13,7 +14,4 @@ import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap"
 
-// pinia
-import pinia from 'stores'
-
-createApp(App).use(Particles).use(router).mount('#app')
+createApp(App).use(Particles).use(router).use(createPinia()).mount('#app')

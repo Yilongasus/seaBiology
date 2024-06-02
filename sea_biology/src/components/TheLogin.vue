@@ -8,6 +8,12 @@
         </div>
         <div class="p-2 sm:flex-column flex-fill border bg-white">
 
+            <!-- ---pinia示範 Start--- -->
+            <button type="button" class="btn btn-light border me-2" @click="counterStore.increment">新增數量</button>
+            <button type="button" class="btn btn-outline-secondary border" @click="counterStore.double">雙倍數量</button>
+            <h1>{{ counterStore.count }}</h1>
+            <!-- ---End--- -->
+
             <div 
             class="
                 d-flex
@@ -81,6 +87,8 @@
 <script setup>
     import { ref, reactive, watch } from 'vue'
     import loginImg from '/src/assets/login.png'
+    import { useCounterStore } from '@/stores/useStore'
+    const counterStore = useCounterStore()
 
     let item = reactive({
             name:2,

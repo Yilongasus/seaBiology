@@ -18,6 +18,9 @@
         <!-- <img src="/src/assets/swiperImg/422923_0.jpg" class="img-fluid rounded-circle" alt="首頁圖片"> -->
     </div>
     <div class="position-sticky zindex_2 mt-5">
+        <!-- ---pinia示範 Start--- -->
+        <h1>{{ counterStore.count }}</h1>
+        <!-- ---End--- -->
         <h2 class="mt-4 mb-0 mx-4 py-2 rounded-top-circle activeBgTitle animate__animated animate__fadeInUp animate__delay-2s">活動介紹</h2>
         <div class="d-flex align-items-center row mx-4 pb-3 bg-white bg-opacity-75 animate__animated animate__fadeInUp animate__delay-3s">
             <div class="imgIndexShow imgLeftRect mt-3 col-sm-5 col-12 animate__animated animate__fadeInLeft animate__delay-4s">
@@ -109,6 +112,8 @@
 </style>
 <script setup>
     import { ref, reactive, watch } from 'vue'
+    import { useCounterStore } from '@/stores/useStore'
+    const counterStore = useCounterStore()
     let text = ref('哈囉')
     setTimeout(()=> {
         text.value = '歡迎來到屏東海生館'
