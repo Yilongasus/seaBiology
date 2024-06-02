@@ -19,7 +19,7 @@
     </div>
     <div class="position-sticky zindex_2 mt-5">
         <!-- ---pinia示範 Start--- -->
-        <h1>{{ counterStore.count }}</h1>
+        <!-- <h1>{{ counterStore.count }}</h1> -->
         <!-- ---End--- -->
         <h2 class="mt-4 mb-0 mx-4 py-2 rounded-top-circle activeBgTitle animate__animated animate__fadeInUp animate__delay-2s">活動介紹</h2>
         <div class="d-flex align-items-center row mx-4 pb-3 bg-white bg-opacity-75 animate__animated animate__fadeInUp animate__delay-3s">
