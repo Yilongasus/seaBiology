@@ -9,9 +9,9 @@
         <div class="p-2 sm:flex-column flex-fill border bg-white">
 
             <!-- ---pinia示範 Start--- -->
-            <!-- <button type="button" class="btn btn-light border me-2" @click="counterStore.increment">新增數量</button>
-            <button type="button" class="btn btn-outline-secondary border" @click="counterStore.double">雙倍數量</button>
-            <h1>{{ counterStore.count }}</h1> -->
+            <!-- <button type="button" class="btn btn-light border me-2" @click="counterStore.increment">新增數量</button> -->
+            <!-- <button type="button" class="btn btn-outline-secondary border" @click="counterStore.double">雙倍數量</button> -->
+            <!-- <h1>{{ counterStore.count }}</h1> -->
             <!-- ---End--- -->
 
             <div 
@@ -41,7 +41,7 @@
                     data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
                     data-context="signin"
                     data-ux_mode="popup"
-                    data-login_uri="https://yilongasus.github.io"
+                    data-login_uri="http://localhost:5173"
                     data-auto_prompt="false"
                     data-callback="handleCredentialResponse"
                     >
@@ -125,6 +125,25 @@
     watch([()=>watchVal.value.level.a, ()=>watchVal.value.level.b], (newVal, old) => {
         console.log(newVal, old);
     });
+
+    function decodeJwtResponse(token) {
+        const parts = token.split('.'),
+        payload = parts[1],
+        decodedPayload = JSON.parse(atob(payload));
+        return decodedPayload;
+    }
+
+    function handleCredentialResponse(response) {
+    const responsePayload = decodeJwtResponse(response.credential);
+    console.log(`
+        照片 ${ responsePayload.picture }
+        全名 ${ responsePayload.name }
+        姓氏 ${ responsePayload.family_name }
+        名字 ${ responsePayload.given_name }
+        信箱 ${ responsePayload.email }
+        發行者 ${ responsePayload.iss }
+    `);
+    }
 </script>
 <style scoped>
     .shack {
