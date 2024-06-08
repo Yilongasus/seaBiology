@@ -36,33 +36,35 @@
                         <span class="text-danger">e</span>
                         註冊再進行預約！</p>
                 </div>
-                <div class="my-3">
+                <div class="my-3 d-flex justify-content-center">
                     <div id="g_id_onload"
-                    data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
-                    data-context="signin"
-                    data-ux_mode="popup"
-                    data-login_uri="http://localhost:5173"
-                    data-auto_prompt="false"
-                    data-callback="handleCredentialResponse"
-                    >
+                        data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
+                        data-context="signup"
+                        data-ux_mode="popup"
+                        data-login_uri="http://localhost:5173"
+                        data-itp_support="true"
+                        data-callback="handleCredentialResponse"
+                        >
+                    </div>
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-shape="rectangular"
+                        data-theme="outline"
+                        data-text="signup_with"
+                        data-size="large"
+                        data-logo_alignment="left"
+                        data-width="400">
+                    </div>
                 </div>
-                <div class="g_id_signin"
-                    data-type="standard"
-                    data-shape="rectangular"
-                    data-theme="outline"
-                    data-text="continue_with"
-                    data-size="large"
-                    data-logo_alignment="left"
-                    data-width="">
+                <div class="d-flex justify-content-center">
+                    <div class="tipGray">
+                        <p class="m-0">
+                            已有帳號了？<span class="text-primary fw-bold pe-auto">在此登入</span>
+                        </p>
+                    </div>
                 </div>
-                </div>
-                <div class="tipGray">
-                    <p class="m-0">
-                        已有帳號了？<span class="text-primary fw-bold pe-auto">在此登入</span>
-                    </p>
-                </div>
-                <div class="privacyContent">
-                    <span>隱私權政策</span> | <span>服務條款聲明</span>
+                <div class="d-flex justify-content-left privacyContent">
+                    <span>隱私權政策</span>&nbsp;|&nbsp;<span>服務條款聲明</span>
                 </div>
             </div>
 
@@ -167,6 +169,7 @@
         font-size: 14px;
         text-align: left;
         padding-top: 0.5rem;
+        margin: 0 5.5rem;
     }
     @keyframes change {
         0% {

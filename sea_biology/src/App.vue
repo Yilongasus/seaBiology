@@ -86,5 +86,8 @@ AOS.init();
     font-size: 14px;
     background: #E7EBEF;
     padding: 0.75rem;
+    width: 400px;
+    max-width: 400px;
+    min-width: min-content;
   }
 </style>
