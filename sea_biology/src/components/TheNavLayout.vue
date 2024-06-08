@@ -66,6 +66,14 @@
             </router-link>
           </li>
         </ul>
+        <figure class="text-center">
+      <audio ref="audioStart" src="https://www.sgps.chc.edu.tw/com/ups069/%E7%AF%84%E4%BE%8B/%E7%AC%AC%E4%BA%8C%E8%AA%B2/%E8%83%8C%E6%99%AF%E9%9F%B3%E6%A8%82/%E9%9F%B3%E6%A8%823.mp3"></audio>
+      <span style="text-decoration: none;width: 100px;" href="/media/cc0-audio/t-rex-roar.mp3"> 音樂&emsp; </span>
+      <button type="button" class="btn btn-outline-secondary border" @click="counterStore.audio">▶</button>
+    </figure>
+    <div>
+      &emsp;&emsp;&emsp;&emsp;&emsp;
+    </div>
       </div>
     </div>
   </nav>
@@ -73,12 +81,22 @@
   <router-view></router-view>
 </template>
     
-<script scoped>
-export default {
-  name: "TheNavLayout",
-  methods: {},
-  setup() {},
-};
+<script setup>
+    import { ref, watch, onMounted } from 'vue'
+    import { useCounterStore } from '@/stores/useStore'
+
+    const audioStart = ref(null)
+    const counterStore = useCounterStore()
+
+    watch(() => counterStore.music, (newMusicState) => {
+        if (newMusicState) {
+            audioStart.value?.play();
+        } else {
+            audioStart.value?.pause();
+        }
+    }, {
+        immediate: true,
+    })
 </script>
 
 <style scoped>
