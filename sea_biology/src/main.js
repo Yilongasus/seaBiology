@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia';
+import { createPinia } from 'pinia'
 import App from './App.vue'
 
 import router from './router'
@@ -8,7 +8,7 @@ import router from './router'
 import Particles from "particles.vue3"
 
 // 元件動畫特效
-import 'animate.css';
+import 'animate.css'
 
 // Bootstrap 5
 import 'bootstrap/dist/css/bootstrap.min.css'

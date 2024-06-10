@@ -11,7 +11,10 @@ export const useCounterStore = defineStore('counter', () => {
     const doubleCount = computed(() => count.value * 2)
 
     // actions
-    let increment = () => count.value++
+    let increment = () => {
+        name.value = 'Costo'
+        count.value++
+    }
     let double = () => count.value *= 2
     let audio = () => music.value = !music.value
 
