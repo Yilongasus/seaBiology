@@ -66,7 +66,6 @@
                 <div class="d-flex justify-content-left privacyContent">
                     <span>隱私權政策</span>&nbsp;|&nbsp;<span>服務條款聲明</span>
                 </div>
-                {{ doubleCount }}
             </div>
 
         </div>
@@ -88,47 +87,47 @@
     </div>
 </template>
 <script setup>
-    import { ref, reactive, watch } from 'vue'
+    import { ref, reactive, watch, onMounted } from 'vue'
     import loginImg from '/src/assets/login.png'
     import { useCounterStore } from '@/stores/useStore'
-    import { storeToRefs } from 'pinia';
+    import { storeToRefs } from 'pinia'
     const counterStore = useCounterStore()
     const { doubleCount } = storeToRefs(counterStore)
-    let item = reactive({
-            name:2,
-            info: {
-                age: 23
-            }
-        }),
-        changItem = ref(0),
-        data = reactive({
-            a: 'apple',
-            b: 'banana',
-            c: 'candy'
-        })
+    // let item = reactive({
+    //         name:2,
+    //         info: {
+    //             age: 23
+    //         }
+    //     }),
+    //     changItem = ref(0),
+    //     data = reactive({
+    //         a: 'apple',
+    //         b: 'banana',
+    //         c: 'candy'
+    //     })
 
     // watch(item, watchItem => {
     //     console.log("reactive:", watchItem);
     // })
 
-    let changeValue = () => {
-        changItem.value > 2 ? item.info.age = 4 : item.info.age = 1
-    },
-    text = ref('哈囉')
-    setTimeout(()=> {
-        text.value = '歡迎來到水世界'
-    }, 3000)
+    // let changeValue = () => {
+        // changItem.value > 2 ? item.info.age = 4 : item.info.age = 1
+    // },
+    // text = ref('哈囉')
+    // setTimeout(()=> {
+    //     text.value = '歡迎來到水世界'
+    // }, 3000)
 
-    let watchVal = ref({
-        level: {
-            a: 'apple',
-            b: 'banana',
-        }
-    })
+    // let watchVal = ref({
+    //     level: {
+    //         a: 'apple',
+    //         b: 'banana',
+    //     }
+    // })
 
-    watch([()=>watchVal.value.level.a, ()=>watchVal.value.level.b], (newVal, old) => {
-        console.log(newVal, old);
-    });
+    // watch([()=>watchVal.value.level.a, ()=>watchVal.value.level.b], (newVal, old) => {
+    //     console.log(newVal, old);
+    // });
 
     function decodeJwtResponse(token) {
         const parts = token.split('.'),
@@ -148,6 +147,41 @@
         發行者 ${ responsePayload.iss }
     `);
     }
+
+    const loadGoogleSignIn = () => {
+    // 確保 gapi script 已加載
+        if (!document.getElementById('google-signin-script')) {
+            const script = document.createElement('script');
+            script.id = 'google-signin-script';
+            script.src = 'https://accounts.google.com/gsi/client';
+            script.onload = initializeGoogleSignIn;
+            document.head.appendChild(script);
+        } else {
+            initializeGoogleSignIn();
+        }
+    };
+
+    const initializeGoogleSignIn = () => {
+        // 確保 gapi script 已可用
+        if (window.google) {
+            window.google.accounts.id.initialize({
+            client_id: "977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com",
+            callback: handleCredentialResponse,
+            });
+            window.google.accounts.id.renderButton(
+            document.getElementById("g_id_signin"),
+            {
+                theme: "outline",
+                size: "large",
+            }
+            );
+            window.google.accounts.id.prompt(); // 這樣會有一個提示出現，如果用戶需要登入的話
+        }
+    };
+
+    onMounted(() => {
+        loadGoogleSignIn();
+    });
 </script>
 <style scoped>
     .shack {

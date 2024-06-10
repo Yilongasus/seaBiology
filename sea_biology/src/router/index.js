@@ -7,6 +7,7 @@ import TheExhibition from '@/components/TheExhibition.vue'
 import TheNews from '@/components/TheNews.vue'
 
 const history = createWebHistory();
+
 const router = createRouter({
     history, routes:[
         {
