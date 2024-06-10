@@ -66,6 +66,7 @@
                 <div class="d-flex justify-content-left privacyContent">
                     <span>隱私權政策</span>&nbsp;|&nbsp;<span>服務條款聲明</span>
                 </div>
+                {{ doubleCount }}
             </div>
 
         </div>
@@ -90,8 +91,9 @@
     import { ref, reactive, watch } from 'vue'
     import loginImg from '/src/assets/login.png'
     import { useCounterStore } from '@/stores/useStore'
+    import { storeToRefs } from 'pinia';
     const counterStore = useCounterStore()
-
+    const { doubleCount } = storeToRefs(counterStore)
     let item = reactive({
             name:2,
             info: {

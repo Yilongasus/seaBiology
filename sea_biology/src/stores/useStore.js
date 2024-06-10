@@ -15,5 +15,5 @@ export const useCounterStore = defineStore('counter', () => {
     let double = () => count.value *= 2
     let audio = () => music.value = !music.value
 
-    return {count, name, music, increment, double, audio}
+    return {count, name, music, increment, double, audio, doubleCount}
 });
