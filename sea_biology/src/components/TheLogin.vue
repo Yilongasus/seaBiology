@@ -1,17 +1,18 @@
 <template>
     <div
-        class="position-sticky vh-100 zindex_2"
+        class="position-sticky mh-100 zindex_2"
     >
-    <div class="d-flex vh-100 loginAll">
-        <div class="sm:flex-column flex-fill py-5 mt-5 align-items-center">
+    <div class="d-flex flex-column flex-sm-row mh-100 loginAll">
+        <div class="flex-fill mh-100 py-5 mt-sm-5 mt-0 align-items-center">
             <img class="loginImg" :src="loginImg" alt="登入圖">
         </div>
-        <div class="p-2 sm:flex-column flex-fill border bg-white">
+        <div class="p-2 mh-100 flex-fill border bg-white">
 
             <!-- ---pinia示範 Start--- -->
-            <!-- <button type="button" class="btn btn-light border me-2" @click="counterStore.increment">新增數量</button> -->
-            <!-- <button type="button" class="btn btn-outline-secondary border" @click="counterStore.double">雙倍數量</button> -->
-            <!-- <h1>{{ counterStore.count }}</h1> -->
+            <!-- <button type="button" class="btn btn-light border me-2" @click="counterStore.increment">新增數量</button>
+            <button type="button" class="btn btn-outline-secondary border" @click="counterStore.double">雙倍數量</button>
+            <h1>{{ counterStore.count }}</h1>
+            <h1>{{ counterStore.name }}</h1> -->
             <!-- ---End--- -->
 
             <div 
@@ -39,13 +40,12 @@
                 <div class="my-3 d-flex justify-content-center">
                     <div id="g_id_onload"
                         data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
-                        data-context="signup"
+                        data-context="use"
                         data-ux_mode="popup"
-                        data-login_uri="http://localhost:5173"
-                        data-itp_support="true"
-                        data-callback="handleCredentialResponse"
-                        >
+                        
+                        data-auto_prompt="false">
                     </div>
+                    <!-- data-login_uri="https://localhost:5173/TheLogin" -->
                     <div class="g_id_signin"
                         data-type="standard"
                         data-shape="rectangular"
@@ -137,19 +137,19 @@
     }
 
     function handleCredentialResponse(response) {
-    const responsePayload = decodeJwtResponse(response.credential);
-    console.log(`
-        照片 ${ responsePayload.picture }
-        全名 ${ responsePayload.name }
-        姓氏 ${ responsePayload.family_name }
-        名字 ${ responsePayload.given_name }
-        信箱 ${ responsePayload.email }
-        發行者 ${ responsePayload.iss }
-    `);
+        const responsePayload = decodeJwtResponse(response.credential);
+        localStorage.setItem("userInfo", responsePayload);
+        console.log(`
+            照片 ${ responsePayload.picture }
+            全名 ${ responsePayload.name }
+            姓氏 ${ responsePayload.family_name }
+            名字 ${ responsePayload.given_name }
+            信箱 ${ responsePayload.email }
+            發行者 ${ responsePayload.iss }
+        `);
     }
 
     const loadGoogleSignIn = () => {
-    // 確保 gapi script 已加載
         if (!document.getElementById('google-signin-script')) {
             const script = document.createElement('script');
             script.id = 'google-signin-script';
@@ -162,7 +162,6 @@
     };
 
     const initializeGoogleSignIn = () => {
-        // 確保 gapi script 已可用
         if (window.google) {
             window.google.accounts.id.initialize({
             client_id: "977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com",
@@ -175,7 +174,7 @@
                 size: "large",
             }
             );
-            window.google.accounts.id.prompt(); // 這樣會有一個提示出現，如果用戶需要登入的話
+            window.google.accounts.id.prompt();
         }
     };
 
@@ -223,6 +222,9 @@
     @media screen and (max-width:768px) {
         #articleWidth {
         width: 100%;
+        }
+        .loginImg {
+            width: -webkit-fill-available;
         }
     }
 </style>
