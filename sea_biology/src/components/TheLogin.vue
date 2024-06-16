@@ -2,40 +2,39 @@
     <div
         class="position-sticky vh-100 zindex_2"
     >
-    <div class="d-flex flex-column flex-lg-row h-100 loginAll">
-        <div class="flex-fill mh-100 py-5 mt-sm-5 mt-0 align-items-center">
+    <div class="d-flex flex-column flex-lg-row h-100">
+        <div class="flex-fill mh-100 py-5 px-auto px-2 order-sm-1 order-2 align-items-center loginAll">
             <img class="loginImg" :src="loginImg" alt="登入圖">
         </div>
-        <div class="p-2 mh-100 flex-fill border bg-white">
-
+        <div class="p-2 mh-100 flex-fill border bg-white order-sm-2 order-1">
             <!-- ---pinia示範 Start--- -->
             <!-- <button type="button" class="btn btn-light border me-2" @click="counterStore.increment">新增數量</button>
             <button type="button" class="btn btn-outline-secondary border" @click="counterStore.double">雙倍數量</button>
             <h1>{{ counterStore.count }}</h1>
             <h1>{{ counterStore.name }}</h1> -->
             <!-- ---End--- -->
-
             <div 
             class="
                 d-flex
                 align-self-center
                 flex-column
-                pt-5
                 sm:mx-2
                 mx-5
-                mt-5
+                mt-0 mt-md-5 mb-md-0 mb-5
+                mx-auto
                 text-center
             ">
                 <div class="loginTitle pt-5 mb-2 fw-bold">預約註冊</div>
                 <div>
-                    <p>歡迎使用官網線上預約，請先
+                    <p>歡迎！透過
                         <span class="text-primary">G</span>
                         <span class="text-danger">o</span>
                         <span class="text-warning">o</span>
                         <span class="text-primary">g</span>
                         <span class="text-success">l</span>
                         <span class="text-danger">e</span>
-                        註冊再進行預約！</p>
+                        註冊來使用線上預約服務。
+                    </p>
                 </div>
                 <div class="my-3 d-flex justify-content-center">
                     <div id="g_id_onload"
@@ -53,7 +52,7 @@
                         data-text="signup_with"
                         data-size="large"
                         data-logo_alignment="left"
-                        data-width="400">
+                        data-width="350">
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
@@ -190,8 +189,9 @@
         animation: change 1s ease-in-out;
     }
     .loginAll {
-        background: linear-gradient(to right, #6B5264 20%, #154166 45%);
+        background: linear-gradient(to right, #6B5264 40%, #154166 58%);
     }
+    /* #6B5264 40%, #154166 47%); */
     .loginImg {
         /* background:url("/src/assets/login.png")center center no-repeat;  */
         height: 500px;
@@ -206,8 +206,8 @@
         font-size: 14px;
         text-align: left;
         padding-top: 0.5rem;
-        width: 400px;
-        max-width: 400px;
+        width: 350px;
+        max-width: 350px;
         min-width: min-content;
     }
     @keyframes change {
@@ -222,6 +222,12 @@
     }
     #articleWidth {
         width: 25%;
+    }
+    @media screen and (max-width:1101px) {
+        .loginImg {
+            width: auto;
+            height: 450px;
+        }
     }
     @media screen and (max-width:768px) {
         #articleWidth {
