@@ -1,8 +1,8 @@
 <template>
     <div
-        class="position-sticky mh-100 zindex_2"
+        class="position-sticky vh-100 zindex_2"
     >
-    <div class="d-flex flex-column flex-sm-row mh-100 loginAll">
+    <div class="d-flex flex-column flex-lg-row h-100 loginAll">
         <div class="flex-fill mh-100 py-5 mt-sm-5 mt-0 align-items-center">
             <img class="loginImg" :src="loginImg" alt="登入圖">
         </div>
@@ -63,8 +63,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="d-flex justify-content-left privacyContent">
-                    <span>隱私權政策</span>&nbsp;|&nbsp;<span>服務條款聲明</span>
+                <div class="d-flex justify-content-center">
+                    <div class="privacyContent">
+                        <span>隱私權政策</span>&nbsp;|&nbsp;<span>服務條款聲明</span>
+                    </div>
                 </div>
             </div>
 
@@ -204,7 +206,9 @@
         font-size: 14px;
         text-align: left;
         padding-top: 0.5rem;
-        margin: 0 5.5rem;
+        width: 400px;
+        max-width: 400px;
+        min-width: min-content;
     }
     @keyframes change {
         0% {
@@ -224,7 +228,7 @@
         width: 100%;
         }
         .loginImg {
-            width: -webkit-fill-available;
+            width: 100%;
         }
     }
 </style>
