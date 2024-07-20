@@ -1,10 +1,10 @@
 import { createWebHistory, createRouter } from 'vue-router';
 
 // import App from '@/App'
-import TheIndex from '@/components/TheIndex.vue'
-import TheLogin from '@/components/TheLogin.vue'
-import TheExhibition from '@/components/TheExhibition.vue'
-import TheNews from '@/components/TheNews.vue'
+import TheIndex from '@/views/TheIndex.vue'
+import TheLogin from '@/views/TheLogin.vue'
+import TheExhibition from '@/views/TheExhibition.vue'
+import TheNews from '@/views/TheNews.vue'
 
 const history = createWebHistory();
 

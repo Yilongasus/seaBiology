@@ -7,20 +7,61 @@
      *************** -->
 <template>
     <div class="bannerIndex h-75 position-sticky zindex_2 text-white d-flex align-items-center justify-content-center">
-        <!-- <video src="/src/assets/pingu.mp4"
-            poster=""
-            width="1080" 
-            height="768" 
-            autoplay="true" 
-            controls="true">
-        </video> -->
         <h1 class="shack display-2 z-3 text-center" :key="text">{{ text }}</h1>
         <!-- <img src="/src/assets/swiperImg/422923_0.jpg" class="img-fluid rounded-circle" alt="首頁圖片"> -->
     </div>
-    <div class="position-sticky zindex_2 mt-5">
+    <div class="position-sticky zindex_2">
+        <div class="grayColorBackground">
+        </div>
+
+        <div class="container-fluid grayColorBackground">
+            <div class="row">
+                <h1 class="col-12 text-stone-600 text-start fw-semibold text-sm-center mt-4 mb-0 py-2 animate__animated animate__fadeInUp animate__delay-2s">企鵝館展示</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-12 p-5">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <div class="">
+                            <div class="content-top px-3">
+                                <el-icon :size="35" class="" color="#743EE4"><ElIconWatch /></el-icon>
+                            </div>
+                            <div class="text-start">
+                                <div class="text-violet-600 font-semibold fs-4">企鵝樂園—企鵝們的歡樂天地</div>
+                                <div class="text-stone-500">走進屏東海生館的企鵝館，迎面而來的是一片寒冷的冰雪世界。在這裡，您可以看到優遊其中的小企鵝們，它們在冰天雪地中活潑可愛，帶給您無限的樂趣。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start mt-5">
+                        <div class="">
+                            <div class="content-top px-3">
+                                <el-icon :size="35" class="" color="#743EE4"><ElIconPresent /></el-icon>
+                            </div>
+                            <div class="text-start">
+                                <div class="text-violet-600 font-semibold fs-4">冰雪精靈</div>
+                                <div class="text-stone-500">屏東海生館的企鵝館為您展現一個夢幻的冰雪世界，這裡的小企鵝們自由自在地在冰冷的環境中嬉戲遊玩。透過透明的玻璃牆，您可以近距離觀察這些可愛的小生靈，感受到牠們的靈動與活力。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-12 pb-4">
+                    <div class="moviesDiv d-flex justify-content-center align-items-center align-self-center">
+                        <img src="/src/assets/movies/stopCover.png" alt="" v-show="!playing" class="opacity-50 w-75" style="margin: 0 2rem;">
+                        <video ref="videoStatus" src="/src/assets/movies/penguin.mp4" class="videoContent position-absolute" @ended="fn.end()" v-show="playing" muted autoplay playsinline loop></video>
+                        <img v-if="!playing" src="/src/assets/movies/play.png" alt="點我撥放"  class="playContent" @click="fn.play()">
+                        <img src="/src/assets/movies/mobile.png" alt="" class="position-absolute top-0 h-100 mx-auto" style="z-index: 10; cursor: pointer;" @click="fn.play()">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
         <!-- ---pinia示範 Start--- -->
         <!-- <h1>{{ counterStore.count }}</h1> -->
         <!-- ---End--- -->
+
+        <!-- ⭐活動介紹 -->
         <h2 class="mt-4 mb-0 mx-4 py-2 rounded-top-circle activeBgTitle animate__animated animate__fadeInUp animate__delay-2s">活動介紹</h2>
         <div class="d-flex align-items-center row mx-4 pb-3 bg-white bg-opacity-75 animate__animated animate__fadeInUp animate__delay-3s">
             <div class="imgIndexShow imgLeftRect mt-3 col-sm-5 col-12 animate__animated animate__fadeInLeft animate__delay-4s">
@@ -83,6 +124,10 @@
         background: linear-gradient(to right, #154166, #154166);
         border-radius: 84% 16% 45% 55% / 57% 43% 57% 43% ;
     }
+    .grayColorBackground {
+        background-color: rgba(245, 245, 245, .8);
+        color: #57534E;
+    }
     .imgLeftRect img {
         box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
         transform:rotate(-5deg);
@@ -99,6 +144,20 @@
         background: linear-gradient(to right, #B5A9B2, #525252);
         color: #ffffff;
     }
+    .moviesDiv {
+        aspect-ratio: 12 / 15;
+        max-width: 450px;
+        position: relative;
+        padding: 1rem;
+    }
+    .playContent {
+        position: absolute;
+        top: 1/3;
+        right: 1/2;
+        max-width: 50px;
+        cursor: pointer;
+        z-index: 20;
+    } 	
     @keyframes change {
         0% {
             opacity: 0;
@@ -109,12 +168,51 @@
             transform: translateY(0);
         }
     }
+    .videoContent {
+        height: 29rem;
+        aspect-ratio: 10 / 16;
+    }
+    .mobileContent {
+        z-index: 10;
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        width: auto;
+        margin: auto;
+    }
+    @media screen and (max-width: 576px) {
+        .moviesDiv {
+            aspect-ratio: 9 / 15;
+            max-width : 500px;
+            padding: 1.25rem;
+        }
+        .videoContent {
+            height: 30rem;
+            aspect-ratio: 9 / 16;
+        }
+    }
 </style>
 <script setup>
     import { ref, reactive, watch } from 'vue'
     import { useCounterStore } from '@/stores/useStore'
     const counterStore = useCounterStore()
-    let text = ref('哈囉')
+    let text = ref('哈囉'),
+        videoStatus = ref(),
+        playing = ref(true),
+        fn = {
+            play() {
+                playing.value = !playing.value;
+                if( playing.value ){
+                    videoStatus.value.play()
+                }else{
+                    videoStatus.value.pause()
+                }
+            },
+            end() {
+                playing.value = false;
+                videoStatus.value.currentTime = 0;
+            }
+        };
     setTimeout(()=> {
         text.value = '歡迎來到屏東海生館'
     }, 3000)
