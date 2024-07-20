@@ -20,6 +20,8 @@ import TheNavLayoutVue from './components/TheNavLayout.vue'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import 'boxicons'
+
 // sideBar
 // import TheSideBarVue from './components/TheSideBar.vue'
 
