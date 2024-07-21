@@ -31,23 +31,21 @@
 
     <div class="container mt-1 pt-3">
         <div v-if="seaData" class="pb-4 d-grid">
-          <div v-for="(data, index) in seaData" :key="index" class=" rounded-lg position-relative overflow-hidden">
-              <a :href="data['Source']" class="fs-6 d-block py-2 position-relative overflow-hidden group text-decoration-none">
+          <div v-for="(data, index) in seaData" :key="index" class="rounded-lg overflow-hidden">
+              <a :href="data['Source']" class="fs-6 d-block my-2 z-1 position-relative overflow-hidden text-decoration-none">
                   <div class="d-flex flex-row justify-content-between align-items-center px-5 py-3 text-center rounded" style="background: linear-gradient(to right, white, #EAEAEA); box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                      <p class="col-span-2 fs-5 fw-semibold pt-3" style="color: #163464;">{{ data['標題'] }}</p>
+                      <p class="col-span-2 fs-4 fw-semibold pt-3" style="color: #163464;">{{ data['標題'] }}</p>
                       <div class="d-flex flex-column justify-content-center">
-                        <p class="fs-6 text-start col-span-2" style="color: #756C63;">發佈日期 <span class="badge text-wrap">{{ data['上版日期'] }}</span></p>
-                        <p class="fs-6 text-start col-span-2" style="color: #756C63;">資料來源 <span class="badge text-wrap">{{ data['資料來源'] }}</span></p>
+                        <p class="text-start col-span-2 fs-5" style="color: #756C63;">發佈日期 <span class="badge text-wrap">{{ data['上版日期'] }}</span></p>
+                        <p class="text-start col-span-2 fs-5" style="color: #756C63;">資料來源 <span class="badge text-wrap">{{ data['資料來源'] }}</span></p>
 
                       </div>
                   </div>
-                  <div class="position-absolute bottom-0 start-0 end-0 top-0 h-100 w-100 overflow-hidden bg-black opacity-50 d-none werd-block"></div>
-                  <div class="position-absolute bottom-0 start-0 end-0 top-0 d-flex align-items-center justify-content-center d-none werd-flex">
-                      <span class="bg-primary text-white px-5 py-3 rounded hover-text-primary hover-bg-light fs-5">
+                  <div class="position-absolute h-100 w-100 overflow-hidden bg-black opacity-75 rounded-lg mask-block z-2"></div>
+                  <div class="position-absolute align-items-center rounded-lg justify-content-center mask-flex z-2">
+                      <span class="px-5 py-2 rounded">
                           前往查看
-                          <el-icon size="16">
-                              <elIconTopRight />
-                          </el-icon>
+                          <box-icon class="bx bxs-like bx-fade-right" animation='fade-up' color="#ffffff" type='solid' name='right-top-arrow-circle'></box-icon>
                       </span>
                   </div>
               </a>
@@ -139,12 +137,39 @@
   border-radius: 80% 20% 81% 19% / 4% 62% 18% 50%;
 }
 
-werd-flex:hover {
-  display: flex;
+.mask-block {
+  display: none;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
 }
 
-
-werd-block:hover {
+a:hover .mask-block {
   display: block;
+}
+
+.mask-flex {
+  display: none;
+  right: 0;
+  bottom: 0;
+  top: 35%;
+  left: 0;
+}
+
+a:hover .mask-flex {
+  display: block;
+}
+
+.mask-flex span {
+  background: rgba(0, 0, 0, .2);
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.8s;
+}
+
+.mask-flex > span:hover {
+  box-shadow: 2px 2px 2px 25px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
 }
 </style>
