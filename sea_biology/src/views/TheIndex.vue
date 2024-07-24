@@ -69,10 +69,10 @@
         <!-- ---End--- -->
 
         <!-- ⭐活動介紹 -->
-        <div class="activeBg">
+        <div class="activeBg animate__animated animate__fadeInUp animate__delay-3s">
             <div class="container">
-                <div class="d-flex align-items-center row py-5 animate__animated animate__fadeInUp animate__delay-3s">
-                    <h1 class="mt-4 mb-0 py-2 col-12 animate__animated animate__fadeInUp animate__delay-2s">特展活動介紹</h1>
+                <div class="d-flex align-items-center row pb-5">
+                    <h1 class="my-4 mb-0 py-2 col-12 animate__animated animate__fadeInUp animate__delay-2s">特展活動介紹</h1>
                     <div class="imgIndexShow imgLeftRect mt-3 col-sm-5 col-12 animate__animated animate__fadeInLeft animate__delay-4s">
                         <img
                         class="img-thumbnail w-50" 
@@ -90,15 +90,15 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="d-flex align-items-center row py-5 bg-white bg-opacity-75 animate__animated animate__fadeInUp animate__delay-4s">
-                <div class="col-sm-6 col-12 text-start order-2 animate__animated animate__fadeInLeft animate__delay-5s">
+        <div class="container animate__animated animate__fadeInUp animate__delay-4s bg-white bg-opacity-75">
+            <div class="d-flex align-items-center row py-5">
+                <div class="col-sm-6 col-12 text-start order-sm-1 order-2 animate__animated animate__fadeInLeft animate__delay-5s">
                     <div class="px-5 fs-6">
                         <p class="fw-bold">展現創意，探索科學</p>
                         <p class="lh-lg">本競賽以科學探究精神為出發點，生活中有許多大家習以為常的事件或現象，希望參賽者能多提出質疑與假設，收集和分析數據、驗證假設、重複驗證與討論，從這些過程中學習獲得結論，實際運用到生活當中。</p>
                     </div>
                 </div>
-                <div class="imgIndexShow imgRightRect col-sm-5 col-12 order-1 animate__animated animate__fadeInRightBig animate__delay-5s">
+                <div class="imgIndexShow imgRightRect col-sm-5 col-12 order-sm-2 order-1 animate__animated animate__fadeInRightBig animate__delay-5s">
                     <img
                     class="img-thumbnail w-50" 
                     src="https://ws.nmmba.gov.tw/001/Upload/217/relpic/6415/12438/fb37bbcf-a02f-4508-a881-a0d8802238b7.jpg"
