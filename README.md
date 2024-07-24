@@ -18,7 +18,7 @@
 [政府資料開放平台](https://data.gov.tw/)
 
 ## 色調搭配
-- 主色調：#154166、#6B5264
-- 輔色調：#D09366、#B5A9B2、#FFFFFF、#525252
+- 主色調：![color](https://img.shields.io/badge/-%23154166.svg?style=for-the-badge&logo=color)、![color](https://img.shields.io/badge/-%236B5264.svg?style=for-the-badge&logo=color)
+- 輔色調：![color](https://img.shields.io/badge/-%23D09366.svg?style=for-the-badge&logo=color)、![color](https://img.shields.io/badge/-%23B5A9B2.svg?style=for-the-badge&logo=color)、![color](https://img.shields.io/badge/-%23ffffff.svg?style=for-the-badge&logo=color)、![color](https://img.shields.io/badge/-%23525252.svg?style=for-the-badge&logo=color)
 
 #### 專案開發時程：![開發中](https://img.shields.io/badge/%E9%96%8B%E7%99%BC%E4%B8%AD-154166)
