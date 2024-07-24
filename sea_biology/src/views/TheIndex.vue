@@ -14,13 +14,13 @@
 
         <!-- ⭐暑假的熱門專區—企鵝館 -->
         <div class="grayColorBackground">
-            <div class="container">
+            <div class="container-lg">
                 <div class="row">
-                    <h1 class="col-12 text-stone-600 text-start fw-semibold text-sm-center mt-4 mb-0 py-2 px-5 animate__animated animate__fadeInUp animate__delay-1s">暑假的熱門專區—企鵝館</h1>
+                    <h1 class="col-12 text-stone-600 text-start fw-semibold text-md-center mt-4 mb-0 py-2 px-5 animate__animated animate__fadeInUp animate__delay-1s">暑假的熱門專區—企鵝館</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-7 col-12">
-                        <div class="d-flex align-items-center justify-content-start mx-sm-0 mx-5">
+                        <div class="d-flex align-items-center justify-content-start mx-md-0 mx-5">
                             <div class="mt-5">
                                 <div class="text-start">
                                     <div 
@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start m-sm-0 m-5">
+                        <div class="d-flex align-items-center justify-content-start m-md-0 m-5">
                             <div class="py-4">
                                 <div class="text-start">
                                     <div class="text-violet-600 font-semibold fs-4 fw-bolder" style="color: #154166;"><box-icon name='hive' color="#154166"></box-icon>企鵝的冰雪王國</div>
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start m-sm-0 m-5">
+                        <div class="d-flex align-items-center justify-content-start m-md-0 m-5">
                             <div class="">
                                 <div class="text-start">
                                     <div class="text-violet-600 font-semibold fs-4 fw-bolder" style="color: #D09366;"><box-icon name='hive' color="#D09366"></box-icon>冰雪中的小冒險家</div>
@@ -70,18 +70,18 @@
 
         <!-- ⭐活動介紹 -->
         <div class="activeBg animate__animated animate__fadeInUp animate__delay-3s">
-            <div class="container">
+            <div class="container-lg">
                 <div class="d-flex align-items-center row pb-5">
                     <h1 class="my-4 mb-0 py-2 col-12 animate__animated animate__fadeInUp animate__delay-2s">特展活動介紹</h1>
-                    <div class="imgIndexShow imgLeftRect mt-3 col-sm-5 col-12 animate__animated animate__fadeInLeft animate__delay-4s">
+                    <div class="imgIndexShow imgLeftRect mt-3 col-md-5 col-12 animate__animated animate__fadeInLeft animate__delay-4s">
                         <img
                         class="img-thumbnail w-50" 
                         src="https://ws.nmmba.gov.tw/001/Upload/OldFile/FileDownLoad/PublishActivies/20150715104349228.JPG"
                         alt="費雪的秘密海報"
                         >
                     </div>
-                    <div class="col-sm-6 col-12 text-start ms-sm-2 ms-0 animate__animated animate__fadeInRightBig animate__delay-4s">
-                        <div class="px-3 pt-sm-0 pt-4 fs-6">
+                    <div class="col-md-6 col-12 text-start ms-md-2 ms-0 animate__animated animate__fadeInRightBig animate__delay-4s">
+                        <div class="px-3 pt-md-0 pt-4 fs-6">
                             <p class="lh-lg">您是否曾經好奇過，透明魚究竟是如何辦到的？牠們為什麼能夠在深海中生存？牠們在海洋生態中扮演著什麼角色？</p>
                             <p class="lh-lg"><span class="fw-bolder">《雀斯派倫特 • 費雪的秘密》</span>特展將帶領您深入探索透明魚的世界，揭開牠們的神秘面紗。特展透過互動式展示、多媒體影片和標本實體等方式，讓您深入了解透明魚的生物學特徵、研究方法和生態價值。</p>
                         </div>
@@ -90,20 +90,22 @@
             </div>
         </div>
 
-        <div class="container animate__animated animate__fadeInUp animate__delay-4s bg-white bg-opacity-75">
-            <div class="d-flex align-items-center row py-5">
-                <div class="col-sm-6 col-12 text-start order-sm-1 order-2 animate__animated animate__fadeInLeft animate__delay-5s">
-                    <div class="px-5 fs-6">
-                        <p class="fw-bold">展現創意，探索科學</p>
-                        <p class="lh-lg">本競賽以科學探究精神為出發點，生活中有許多大家習以為常的事件或現象，希望參賽者能多提出質疑與假設，收集和分析數據、驗證假設、重複驗證與討論，從這些過程中學習獲得結論，實際運用到生活當中。</p>
+        <div class="animate__animated animate__fadeInUp animate__delay-4s bg-white bg-opacity-75">
+            <div class="container-lg">
+                <div class="d-flex align-items-center row py-5">
+                    <div class="col-md-6 col-12 text-start order-md-1 order-2 animate__animated animate__fadeInLeft animate__delay-5s">
+                        <div class="px-5 fs-6">
+                            <p class="fw-bold">展現創意，探索科學</p>
+                            <p class="lh-lg">本競賽以科學探究精神為出發點，生活中有許多大家習以為常的事件或現象，希望參賽者能多提出質疑與假設，收集和分析數據、驗證假設、重複驗證與討論，從這些過程中學習獲得結論，實際運用到生活當中。</p>
+                        </div>
                     </div>
-                </div>
-                <div class="imgIndexShow imgRightRect col-sm-5 col-12 order-sm-2 order-1 animate__animated animate__fadeInRightBig animate__delay-5s">
-                    <img
-                    class="img-thumbnail w-50" 
-                    src="https://ws.nmmba.gov.tw/001/Upload/217/relpic/6415/12438/fb37bbcf-a02f-4508-a881-a0d8802238b7.jpg"
-                    alt="這樣教我就懂海報"
-                    >
+                    <div class="imgIndexShow imgRightRect col-md-5 col-12 order-md-2 order-1 animate__animated animate__fadeInRightBig animate__delay-5s">
+                        <img
+                        class="img-thumbnail w-50" 
+                        src="https://ws.nmmba.gov.tw/001/Upload/217/relpic/6415/12438/fb37bbcf-a02f-4508-a881-a0d8802238b7.jpg"
+                        alt="這樣教我就懂海報"
+                        >
+                    </div>
                 </div>
             </div>
         </div>
