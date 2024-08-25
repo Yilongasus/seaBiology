@@ -123,7 +123,7 @@
             <div class="timeline">
                 <div class="timeline-item left">
                     <div class="content">
-                        <h3 class="text-red">中秋佳節參觀事宜</h3>
+                        <h3 class="">中秋佳節參觀事宜</h3>
                         <p>113年9月17日AM:09:00~PM:04:30分，中秋佳節邀請本(車城)鄉鄉民免費入館參觀。</p>
                         <p><small>2024/8/22 下午 02:12:00</small></p>
                     </div>
@@ -140,7 +140,7 @@
                 <div class="timeline-item left">
                     <div class="content">
                         <h3 class="">全球首例 臺灣人工繁殖密點少棘胡椒鯛魚苗全紀錄</h3>
-                        <p class="text-slate-300">俗稱少棘石鱸、加志或圭志，最大體長可達100公分，是石鱸科中的一種珊瑚礁魚類。<a href="https://doi.org/10.1016/j.aquaculture.2024.741380" rel="noreferrer noopener">期刊連結</a></p>
+                        <p class="">俗稱少棘石鱸、加志或圭志，最大體長可達100公分，是石鱸科中的一種珊瑚礁魚類。<a href="https://doi.org/10.1016/j.aquaculture.2024.741380" rel="noreferrer noopener">期刊連結</a></p>
                         <p><small>2024/8/7 下午 04:21:00</small></p>
                     </div>
                 </div>
@@ -310,6 +310,21 @@
     .timeline-item > .content {
         text-align: left;
     }
+    .timeline-item > .content h3 {
+        color: #505152;
+        font-weight: 600;
+    }
+    .timeline-item > .content p {
+        color: #6f6d6d;
+    }
+    .timeline-item > .content small {
+        /* border: 1px solid #6f6f6f; */
+        background-color: #A2A3A4;
+        padding: 1% 2%;
+        border-radius: 10px;
+        font-weight: 600;
+        color: #fefefe;
+    }
     .left {
         left: 0;
     }
@@ -324,9 +339,9 @@
         width: 0;
         z-index: 1;
         right: 30px;
-        border: medium solid #505152;
+        border: medium solid #6F7071;
         border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent #505152;
+        border-color: transparent transparent transparent #6F7071;
     }
     .right::before {
         content: " ";
@@ -336,9 +351,9 @@
         width: 0;
         z-index: 1;
         left: 30px;
-        border: medium solid #505152;
+        border: medium solid #6F7071;
         border-width: 10px 10px 10px 0;
-        border-color: transparent #505152 transparent transparent;
+        border-color: transparent #6F7071 transparent transparent;
     }
     .right::after {
         left: -15px;

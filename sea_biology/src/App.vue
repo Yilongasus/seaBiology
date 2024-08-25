@@ -9,6 +9,7 @@
 <template>
   <TheParticlesVue></TheParticlesVue>
   <TheNavLayoutVue></TheNavLayoutVue>
+  <TheFooterLayoutVue></TheFooterLayoutVue>
   <!-- <TheSideBarVue></TheSideBarVue> -->
 </template>
 <script>
@@ -16,6 +17,7 @@
 import TheParticlesVue from './components/TheParticles.vue'
 
 import TheNavLayoutVue from './components/TheNavLayout.vue'
+import TheFooterLayoutVue from './components/TheFooterLayout.vue'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -34,7 +36,7 @@ export default {
   components: {
     TheParticlesVue,
     TheNavLayoutVue,
-    // TheSideBarVue
+    TheFooterLayoutVue
   },
   data() {
     return {
