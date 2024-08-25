@@ -69,7 +69,7 @@
         <!-- ---End--- -->
 
         <!-- ⭐活動介紹 -->
-        <div class="activeBg animate__animated animate__fadeInUp animate__delay-3s">
+        <div :class="{'activeBg bgActivity swimAnimation': true, 'swimAnimationActive': isVisible.bgActivity}">
             <div class="container-lg">
                 <div class="d-flex align-items-center row pb-5">
                     <h1 class="my-4 mb-0 py-2 col-12 animate__animated animate__fadeInUp animate__delay-2s">特展活動介紹</h1>
@@ -89,17 +89,16 @@
                 </div>
             </div>
         </div>
-
-        <div class="animate__animated animate__fadeInUp animate__delay-4s bg-white bg-opacity-75">
+        <div class="bg-white bg-opacity-75">
             <div class="container-lg">
                 <div class="d-flex align-items-center row py-5">
-                    <div class="col-md-6 col-12 text-start order-md-1 order-2 animate__animated animate__fadeInLeft animate__delay-5s">
-                        <div class="px-5 fs-6">
+                    <div :class="{'col-md-6 col-12 text-start order-md-1 order-2 contentActivity swimAnimation': true, 'swimAnimationActive': isVisible.contentActivity}">
+                        <div class="px-5 fs-6 swimActive">
                             <p class="fw-bold">展現創意，探索科學</p>
                             <p class="lh-lg">本競賽以科學探究精神為出發點，生活中有許多大家習以為常的事件或現象，希望參賽者能多提出質疑與假設，收集和分析數據、驗證假設、重複驗證與討論，從這些過程中學習獲得結論，實際運用到生活當中。</p>
                         </div>
                     </div>
-                    <div class="imgIndexShow imgRightRect col-md-5 col-12 order-md-2 order-1 animate__animated animate__fadeInRightBig animate__delay-5s">
+                    <div :class="{'imgIndexShow imgRightRect col-md-5 col-12 order-md-2 order-1 imgActivity swimAnimation': true, 'swimAnimationActive': isVisible.imgActivity}">
                         <img
                         class="img-thumbnail w-50" 
                         src="https://ws.nmmba.gov.tw/001/Upload/217/relpic/6415/12438/fb37bbcf-a02f-4508-a881-a0d8802238b7.jpg"
@@ -116,6 +115,52 @@
             alt="蟹逅經典特展海報"
             >
         </div> -->
+
+
+        <!-- ⭐時間軸 -->
+        <div class="bg-white bg-opacity-75">
+            <h1 class="text-md-center text-[#505152] fw-semibold py-3">活動時程</h1>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3 class="text-red">中秋佳節參觀事宜</h3>
+                        <p>113年9月17日AM:09:00~PM:04:30分，中秋佳節邀請本(車城)鄉鄉民免費入館參觀。</p>
+                        <p><small>2024/8/22 下午 02:12:00</small></p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>&nbsp;第七屆臺灣海洋生物技術學會學術研討會</h3>
+                        <p>
+                            2024年9月26-28日舉辦，最新消息及上述所有重要日程之資訊，請見<a href="https://2024omics.ialtec.com/" rel="noreferrer noopener">官方網站</a>。
+                        </p>
+                        <p><small>2024/8/15 上午 09:53:00</small></p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3 class="">全球首例 臺灣人工繁殖密點少棘胡椒鯛魚苗全紀錄</h3>
+                        <p class="text-slate-300">俗稱少棘石鱸、加志或圭志，最大體長可達100公分，是石鱸科中的一種珊瑚礁魚類。<a href="https://doi.org/10.1016/j.aquaculture.2024.741380" rel="noreferrer noopener">期刊連結</a></p>
+                        <p><small>2024/8/7 下午 04:21:00</small></p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>【在海的那端與你蟹逅】線上活動</h3>
+                        <p>你知道陸蟹是什麼生物嗎?想知道牠們究竟可不可以吃嗎?想輕鬆了解陸蟹這種可愛小生物的話，就來參加【在海的那端與你蟹逅】線上活動吧!</p>
+                        <p><small>2024/7/31 上午 09:44:00</small></p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>南溟有鯤 破浪翻騰</h3>
+                        <p>海生館出版了《南溟有鯤 破浪翻騰&mdash;&mdash;國立海洋生物博物館紀實暨立體書2000~2024》，呈現從建館到開館以來的發展軌跡。</p>
+                        <p><small>2024/7/26 下午 07:16:00</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 </template>
@@ -217,13 +262,100 @@
         }
     }
 </style>
+<style scoped>
+    .swimAnimation {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .swimAnimationActive {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #A2A3A4;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        background: #ffffff;
+        width: 49.6%;
+        z-index: 9;
+    }
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -18px;
+        background-color: white;
+        border: 4px solid #6F7071;
+        top: 15px;
+        border-radius: 50%;
+    }
+    .timeline-item > .content {
+        text-align: left;
+    }
+    .left {
+        left: 0;
+    }
+    .right {
+        left: 50.3%;
+    }
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 20px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid #505152;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #505152;
+    }
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 20px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid #505152;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #505152 transparent transparent;
+    }
+    .right::after {
+        left: -15px;
+    }
+</style>
 <script setup>
-    import { ref, reactive, watch } from 'vue'
+    import { ref, reactive, watch, onMounted } from 'vue'
     import { useCounterStore } from '@/stores/useStore'
     const counterStore = useCounterStore()
     let text = ref('哈囉'),
         videoStatus = ref(),
         playing = ref(true),
+        isVisible = reactive({
+            bgActivity: false,
+            contentActivity: false,
+            imgActivity: false,
+        }),
         fn = {
             play() {
                 playing.value = !playing.value;
@@ -241,4 +373,51 @@
     setTimeout(()=> {
         text.value = '歡迎來到屏東海生館'
     }, 3000)
+    // 🌟活動介紹
+    onMounted(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('activeBg')) {
+                    isVisible.bgActivity = true;
+                    } else if (entry.target.classList.contains('col-md-6')) {
+                    isVisible.contentActivity = true;
+                    } else if (entry.target.classList.contains('imgIndexShow')) {
+                    isVisible.imgActivity = true;
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        const elementBgActivity = document.querySelector('.bgActivity'),
+            elementContentActivity = document.querySelector('.contentActivity'),
+            elementImgActivity = document.querySelector('.imgActivity')
+        if (elementBgActivity) observer.observe(elementBgActivity);
+        if (elementContentActivity) observer.observe(elementContentActivity);
+        if (elementImgActivity) observer.observe(elementImgActivity);
+    });
+
+
+    // 🌟時間軸
+    const timelineItems = ref([]);
+    onMounted(() => {
+        timelineItems.value = document.querySelectorAll('.timeline-item');
+        const observer = new IntersectionObserver(
+            (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                }
+            });
+            },
+            { threshold: 0.1 }
+        );
+        timelineItems.value.forEach((item) => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    });
 </script>
