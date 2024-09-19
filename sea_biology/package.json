@@ -1,6 +1,6 @@
 {
   "name": "sea_biology",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -32,5 +32,8 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.1.4"
+  }
 }

@@ -7,7 +7,7 @@
      *************** -->
 
 <template>
-  <div id="main" class="mt-4 p-5 position-sticky zindex_2 text-white">
+  <div id="main" class="my-4 p-5 position-sticky zindex_2 text-white">
     <h1 class="mb-3 fw-semibold text-center display-4">展館消息</h1>
     <!-- <div v-if="seaData">
       <div v-for="(data, index) in seaData" :key="index" class="border-orange-800">

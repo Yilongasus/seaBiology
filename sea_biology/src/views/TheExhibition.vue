@@ -7,7 +7,7 @@
 *************** -->
 
 <template>
-    <div id="main" class="mt-4 p-5 position-sticky zindex_2">
+    <div id="main" class="my-4 p-5 position-sticky zindex_2">
         <div class="row justify-content-center mt-8">
             <div class="card col-12 col-lg-4 mx-0 mx-lg-3 mx-md-3 mt-5 py-3 animate__animated animate__fadeIn align-items-center border-0 justify-content-around shadow rounded" id="articleWidth" v-for="item in exhibitionItems" :key="item">
                 <div class="card-body justify-content-center">
