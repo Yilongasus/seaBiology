@@ -4,7 +4,7 @@
             <p class="pt-3">
                 ©2024&emsp;By&nbsp;<a class="btn btn-outline-light" href="https://github.com/Yilongasus" rel="noreferrer noopener">Yilongasus</a>&emsp;免責聲明
             </p>
-            本網站僅供個人作品集展示而設計，不提供任何商業用途。
+            <p>本網站僅供個人作品集展示而設計，不提供任何商業用途。</p>
         </div>
     </div>
 </template>
