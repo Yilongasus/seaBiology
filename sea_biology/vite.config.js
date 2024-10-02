@@ -12,4 +12,5 @@ export default defineConfig({
     },
   },
   base: process.env.VITE_API_BASE_URL || '/',
+  // base: '/sea-biology/',
 })
