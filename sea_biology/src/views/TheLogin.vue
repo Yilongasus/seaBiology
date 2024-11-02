@@ -13,6 +13,7 @@
             <h1>{{ counterStore.count }}</h1>
             <h1>{{ counterStore.name }}</h1> -->
             <!-- ---End--- -->
+            {{ route.params.another }}
             <div 
             class="
                 d-flex
@@ -91,9 +92,11 @@
     import { ref, reactive, watch, onMounted } from 'vue'
     import loginImg from '/src/assets/login.png'
     import { useCounterStore } from '@/stores/useStore'
+    import { useRoute } from 'vue-router'
     import { storeToRefs } from 'pinia'
     const counterStore = useCounterStore()
     const { doubleCount } = storeToRefs(counterStore)
+    const route = useRoute()
     // let item = reactive({
     //         name:2,
     //         info: {
