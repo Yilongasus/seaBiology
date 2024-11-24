@@ -15,9 +15,10 @@ const router = createRouter({
             component: TheIndex,
             name: 'TheIndex',  
             meta: {title: '首頁'}                                  
-        },        
+        },
+        // /TheLogin/:id/:another
         {
-            path: '/TheLogin/:id/:another',
+            path: '/TheLogin',
             component: TheLogin,
             name: 'TheLogin',
             meta: {title: '線上預約'}

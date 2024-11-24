@@ -13,7 +13,7 @@
             <h1>{{ counterStore.count }}</h1>
             <h1>{{ counterStore.name }}</h1> -->
             <!-- ---End--- -->
-            {{ route.params.another }}
+            <!-- {{ route.params.another }} -->
             <div 
             class="
                 d-flex
