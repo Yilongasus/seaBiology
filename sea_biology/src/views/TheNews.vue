@@ -52,7 +52,7 @@
           </div>
         </div>
         <div v-else>
-          <h3 class="text-white" data-aos="zoom-out-left">載入中...</h3>
+            <h3 class="text-white" data-aos="zoom-out-left">載入中...</h3>
         </div>
     </div>
 
@@ -60,40 +60,39 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
-  import axios from 'axios'
+    import { reactive, ref } from 'vue'
+    import axios from 'axios'
 
-  export default {
-    name: 'TheExhibition',
-    components: {},
-    setup() {
+    export default {
+        name: 'TheExhibition',
+        components: {},
+        setup() {
 
-      let seaData = ref(null);
+            let seaData = reactive([]);
 
-      axios.get('https://www.nmmba.gov.tw/OpenData.aspx?SN=C7A4275096465BFB')
-        .then((res, error) => {
-          if (error) {
-            console.log(`Error： ${error}`)
-          } else {
-            seaData.value = res.data
-            console.table(seaData.value)
-          }
-        })
+            axios.get('https://www.nmmba.gov.tw/OpenData.aspx?SN=C7A4275096465BFB')
+            .then((res, error) => {
+                if (error) {
+                console.log(`Error： ${error}`)
+                } else {
+                Object.assign(seaData, res.data)
+                }
+            })
 
-      // 定義 computed property 來截取內容的前50個字
-      const truncateContent = (content) => {
-        if (content) {
-          return `${content.substring(0, 60)}......`;
-        }
-        return '';
-      };
+        // 定義 computed property 來截取內容的前50個字
+            const truncateContent = (content) => {
+                if (content) {
+                    return `${content.substring(0, 60)}......`;
+                }
+                return '';
+            };
 
-      return {
-        seaData,
-        truncateContent,
-      }
+            return {
+                seaData,
+                truncateContent,
+            }
 
-    },
+        },
     // changeHtml(val) {
     //   let dom = document.createElement('div')
     //   dom.innerHTML = val
@@ -103,7 +102,7 @@
     // }
     // 原本要轉內容的html字串變成html
 
-  }
+    }
 </script>
 
 <style scoped>
