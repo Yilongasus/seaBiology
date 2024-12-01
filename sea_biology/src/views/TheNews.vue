@@ -70,7 +70,7 @@
 
             let seaData = reactive([]);
 
-            axios.get('https://www.nmmba.gov.tw/OpenData.aspx?SN=C7A4275096465BFB')
+            axios.get('/api/OpenData.aspx?SN=C7A4275096465BFB')
             .then((res, error) => {
                 if (error) {
                 console.log(`Error： ${error}`)
