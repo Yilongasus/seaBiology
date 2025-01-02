@@ -7,9 +7,10 @@
      *************** -->
 
 <template>
-    <TheParticlesVue></TheParticlesVue>
-    <TheNavLayoutVue></TheNavLayoutVue>
-    <TheFooterLayoutVue></TheFooterLayoutVue>
+    <div class="mask" v-show="mask"></div>
+    <TheParticlesVue v-show="!mask"></TheParticlesVue>
+    <TheNavLayoutVue v-show="!mask"></TheNavLayoutVue>
+    <TheFooterLayoutVue v-show="!mask"></TheFooterLayoutVue>
     <!-- <TheSideBarVue></TheSideBarVue> -->
 </template>
 <script>
@@ -42,18 +43,24 @@ export default {
         return {
         exhibitionItems: json,
         pageTitle: "",
+        mask: false,
         };
     },
     setup() {},
     mounted() {
         this.setPageTitle();
+        window.addEventListener('resize', this.checkScreenWidth);
     },
     methods: {
         setPageTitle() {
-        this.pageTitle = import.meta.env.VITE_APP_TITLE || "敬請期待";
-        document.title = this.pageTitle;
+            this.pageTitle = import.meta.env.VITE_APP_TITLE || "敬請期待";
+            document.title = this.pageTitle;
         },
-    },
+        checkScreenWidth() {
+            const isMobile = window.innerWidth <= 768;
+            isMobile? this.mask = true : this.mask = false;
+        }
+    }
 };
 
 AOS.init();
@@ -66,6 +73,9 @@ AOS.init();
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #444444;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 #main {
@@ -84,6 +94,7 @@ AOS.init();
     box-shadow: 5px 5px 0px #fbc860;
     color: #ffffff !important;
 }
+
 .tipGray {
     font-size: 14px;
     background: #e7ebef;
@@ -91,5 +102,47 @@ AOS.init();
     width: 350px;
     max-width: 350px;
     min-width: min-content;
+}
+
+.mask {
+    background-color: rgba(255, 255, 255, 0.98);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.mask::after {
+    content: "手機版製作中~💦";
+    display: block;
+    background-color: rgba(208, 147, 102, 0.9);
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: rgba(21, 65, 102, 1);
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation: heartbeat 1s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(1.1);
+    }
 }
 </style>
