@@ -61,9 +61,7 @@
             exhibitionItems: json
         }
         },
-        setup() { 
-
-        }
+        setup() { }
 
     }
 </script>   
