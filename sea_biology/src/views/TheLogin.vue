@@ -42,7 +42,6 @@
                         data-client_id="977111883266-qiol7u2pjo83gf0qh7u8n1qgakp6b8m3.apps.googleusercontent.com"
                         data-context="use"
                         data-ux_mode="popup"
-                        
                         data-auto_prompt="false">
                     </div>
                     <!-- data-login_uri="https://localhost:5173/TheLogin" -->
@@ -69,7 +68,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -89,7 +87,7 @@
     </div>
 </template>
 <script setup>
-    import { ref, reactive, watch, onMounted } from 'vue'
+    import { ref, reactive, computed, watch, onMounted } from 'vue'
     import loginImg from '/src/assets/login.png'
     import { useCounterStore } from '@/stores/useStore'
     import { useRoute } from 'vue-router'
@@ -131,7 +129,6 @@
 
     // watch([()=>watchVal.value.level.a, ()=>watchVal.value.level.b], (newVal, old) => {
     //     console.log(newVal, old);
-    // });
 
     function decodeJwtResponse(token) {
         const parts = token.split('.'),

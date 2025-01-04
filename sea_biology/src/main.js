@@ -16,7 +16,7 @@ import "bootstrap"
 
 // 🌟 重整後前往/sea-biology
 if (window.performance.navigation.type === 1 && window.location.pathname !== '/sea-biology') {
-    window.location.href = '/sea-biology';
+    window.location.href = '/sea-biology/';
 }
 
 createApp(App).use(Particles).use(router).use(createPinia()).mount('#app')
