@@ -92,6 +92,7 @@
     import { useCounterStore } from '@/stores/useStore'
     import { useRoute } from 'vue-router'
     import { storeToRefs } from 'pinia'
+    import Swal from 'sweetalert2'
     const counterStore = useCounterStore()
     const { doubleCount } = storeToRefs(counterStore)
     const route = useRoute()
@@ -169,12 +170,22 @@
             callback: handleCredentialResponse,
             });
             window.google.accounts.id.renderButton(
-            document.getElementById("g_id_signin"),
-            {
-                theme: "outline",
-                size: "large",
-            }
+                document.getElementById("g_id_signin"),
+                {
+                    theme: "outline",
+                    size: "large",
+                }
             );
+
+            document.querySelector(".g_id_signin").addEventListener("click", () => {
+                Swal.fire({
+                    title: "哦！你發現了尚未完成的功能",
+                    icon: "warning",
+                    text: "Google第三方登入正在努力開發中🚧，敬請期待！",
+                    confirmButtonText: '了解了',
+                    showCloseButton: true,
+                });
+            });
             window.google.accounts.id.prompt();
         }
     };
