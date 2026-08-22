@@ -34,6 +34,9 @@
     "not ie 11"
   ],
   "dependencies": {
-    "@vitejs/plugin-vue": "^6.0.7"
+    "@vitejs/plugin-vue": "^5.1.4"
+  },
+  "overrides": {
+    "nanoid": "3.3.18"
   }
 }
